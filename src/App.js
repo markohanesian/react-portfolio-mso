@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Switch, Grid, Typography, Button, Paper } from "@material-ui/core";
+import {
+  Switch,
+  Grid,
+  Typography,
+  Button,
+  ButtonGroup,
+  Paper,
+  Avatar,
+} from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import "./App.css";
 // components
@@ -36,15 +44,28 @@ function App() {
             ></Switch>
           </Grid>
           <Grid class="grid-default">
+            <img
+              id="headshot"
+              alt="Mark Headshot"
+              src="imgs/mark-headshot.png"
+            ></img>
             <Typography variant="h4" component="h2" gutterBottom>
               Hello, I'm Mark
             </Typography>
             <Typography variant="subtitle1" gutterBottom>
               Full Stack Developer ++ Designer
             </Typography>
+            <a href="mailto:mso872@gmail.com">
+              Email
+            </a>
+            <a href="https://www.linkedin.com/in/mark-ohanesian/">
+              LinkedIn
+            </a>
           </Grid>
           <Grid class="grid-default">
-            <Button>button 1</Button>
+            <Typography variant="h4" component="h2" gutterBottom>
+              Development
+            </Typography>
           </Grid>
         </Paper>
       </ThemeProvider>
