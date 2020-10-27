@@ -39,7 +39,7 @@ function App() {
             <Typography variant="h4" component="h2" gutterBottom>
               Hello, I'm Mark
             </Typography>
-            <Typography variant="subtitle1" component="h2" gutterBottom>
+            <Typography variant="subtitle1" gutterBottom>
               Full Stack Developer ++ Designer
             </Typography>
           </Grid>
