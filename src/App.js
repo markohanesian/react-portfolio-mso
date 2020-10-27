@@ -3,10 +3,7 @@ import {
   Switch,
   Grid,
   Typography,
-  Button,
-  ButtonGroup,
   Paper,
-  Avatar,
 } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import "./App.css";
