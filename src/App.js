@@ -40,7 +40,7 @@ function App() {
               onChange={() => setDarkMode(!darkMode)}
             ></Switch>
           </Grid>
-          <Grid class="grid-default">
+          <Grid className="grid-default">
             <img
               id="headshot"
               alt="Mark Headshot"
@@ -59,7 +59,7 @@ function App() {
               LinkedIn
             </a>
           </Grid>
-          <Grid class="grid-default">
+          <Grid className="grid-default">
             <Typography variant="h4" component="h2" gutterBottom>
               Development
             </Typography>
