@@ -8,6 +8,8 @@ import {
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import "./App.css";
 // components
+// Development items
+import DevItemOne from '../src/components/DevItems/DevItemOne';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -63,6 +65,7 @@ function App() {
             <Typography variant="h4" component="h2" gutterBottom>
               Development
             </Typography>
+            <DevItemOne />
           </Grid>
         </Paper>
       </ThemeProvider>
