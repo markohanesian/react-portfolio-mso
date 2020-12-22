@@ -1,72 +1,119 @@
 import React, { useState } from "react";
+import { Switch, Grid, Typography, Paper } from "@material-ui/core";
 import {
-  Switch,
-  Grid,
-  Typography,
-  Paper,
-} from "@material-ui/core";
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+  ThemeProvider,
+  createMuiTheme,
+  makeStyles,
+} from "@material-ui/core/styles";
 import "./App.css";
 // components
+import Header from "../src/components/Header";
+import Footer from "../src/components/Footer";
 // Development items
-import DevItemOne from '../src/components/DevItems/DevItemOne';
+import DevItem from "./components/DevItem";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-
   const theme = createMuiTheme({
     palette: {
       type: darkMode ? "dark" : "light",
     },
   });
+  const useStyles = makeStyles({
+    root: {
+      flexGrow: 1,
+    },
+    topBar:{
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "flex-end",
+    },
+    gridColumn: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      padding: '2rem'
+    },
+    gridRow: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'flex-start',
+    },
+    heading2: {
+      display: "flex",
+      flexDirection: "row",
+      alignSelf: "flex-start",
+      fontSize: "1.3rem",
+      fontWeight: "300",
+      marginTop: "1rem",
+    },
+    subtitle: {
+      fontSize: "0.8rem",
+      fontWeight: "400",
+    },
+    container: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      textAlign: "center",
+    },
+  });
+  const classes = useStyles();
+
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
         <Paper
           style={{
-            height: "100vh",
+            // height: "100vh",
             display: "flex",
             flexDirection: "column",
             padding: "1rem",
           }}
         >
           <Grid
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "flex-end",
-            }}
+            className={classes.topBar}
           >
             <Switch
               checked={darkMode}
               onChange={() => setDarkMode(!darkMode)}
             ></Switch>
           </Grid>
-          <Grid className="grid-default">
-            <img
-              id="headshot"
-              alt="Mark Headshot"
-              src="imgs/mark-headshot.png"
-            ></img>
-            <Typography variant="h4" component="h2" gutterBottom>
-              Hello, I'm Mark
-            </Typography>
-            <Typography variant="subtitle1" gutterBottom>
-              Full Stack Developer ++ Designer
-            </Typography>
-            <a href="mailto:mso872@gmail.com">
-              Email
-            </a>
-            <a href="https://www.linkedin.com/in/mark-ohanesian/">
-              LinkedIn
-            </a>
+          <Grid className={classes.root}>
+            <Header />
+            <Grid className={classes.gridColumn}>
+              <Typography
+                  className={classes.heading2}
+                  variant="h2"
+                  component="h2"
+                  gutterBottom
+                >
+                  Development
+              </Typography>
+              <Grid className={classes.gridRow}>
+                <DevItem
+                  cardImage="imgs/git-good.png"
+                  cardTitle="Git Good"
+                  cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
+                />
+                <DevItem
+                  cardImage="imgs/tetris-mso.png"
+                  cardTitle="tetris-mso"
+                  cardDescription="Inspired by the original Tetris game, playable with your keyboard, built with vanilla javascript"
+                />
+              </Grid>
+              <Typography
+                  className={classes.heading2}
+                  variant="h2"
+                  component="h2"
+                  gutterBottom
+                >
+                  Design
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid className="grid-default">
-            <Typography variant="h4" component="h2" gutterBottom>
-              Development
-            </Typography>
-            <DevItemOne />
-          </Grid>
+          <Footer />
         </Paper>
       </ThemeProvider>
     </div>
