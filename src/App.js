@@ -80,9 +80,8 @@ function App() {
               onChange={() => setDarkMode(!darkMode)}
             ></Switch>
           </Grid>
-          <Grid className={classes.root}>
             <Header />
-            <Grid className={classes.gridColumn}>
+            <Grid>
               <Typography
                   className={classes.heading2}
                   variant="h2"
@@ -91,17 +90,21 @@ function App() {
                 >
                   Development
               </Typography>
-              <Grid className={classes.gridRow}>
-                <DevItem
-                  cardImage="imgs/git-good.png"
-                  cardTitle="Git Good"
-                  cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
-                />
+              <Grid container>
+                <Grid item xs={12} sm={6}>
+                  <DevItem
+                    cardImage="imgs/git-good.png"
+                    cardTitle="Git Good"
+                    cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
                 <DevItem
                   cardImage="imgs/tetris-mso.png"
                   cardTitle="tetris-mso"
                   cardDescription="Inspired by the original Tetris game, playable with your keyboard, built with vanilla javascript"
                 />
+                </Grid>
               </Grid>
               <Typography
                   className={classes.heading2}
@@ -112,7 +115,6 @@ function App() {
                   Design
               </Typography>
             </Grid>
-          </Grid>
           <Footer />
         </Paper>
       </ThemeProvider>
