@@ -11,6 +11,8 @@ import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 // Development items
 import DevItem from "./components/DevItem";
+// Design Items
+import DesignItem from "./components/DesignItem";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -130,11 +132,37 @@ function App() {
           </Typography>
           <Grid container>
             <Grid item xs={12} sm={6}>
+              <DesignItem
+                cardImage="imgs/tulips-concept.png"
+                cardTitle="Shoe Product Page Concept"
+                cardDescription="Product landing page concept made in Adobe XD | featuring my product photography"
+                dribbleURL="https://markohanesian.github.io/markohanesian/"
+              />
             </Grid>
-
             <Grid item xs={12} sm={6}>
+              <DesignItem
+                cardImage="imgs/hisherswatches.jpg"
+                cardTitle="Apple Watch Faces Concept"
+                cardDescription="Apple Watch faces concept designed in Adobe xD and Photoshop"
+                dribbleURL="https://dribbble.com/shots/13774573-Apple-Watch-Face-Concept-Rose-Gold-His-Hers?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Apple%20Watch%20Face%20Concept%20-%20Rose%20Gold%20His%20%2B%20Hers&utm_medium=Social_Share"
+              />
             </Grid>
-
+            <Grid item xs={12} sm={6}>
+              <DesignItem
+                cardImage="imgs/signup-pgp.png"
+                cardTitle="App Signup Page Concept"
+                cardDescription="Mobile-friendly signup form conceptdesigned in Adobe xD"
+                dribbleURL="https://dribbble.com/shots/13495221-Signup-Form-Concept-Project-Golden-Phoenix?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Signup%20Form%20Concept%20-%20Project%20Golden%20Phoenix&utm_medium=Social_Share"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <DesignItem
+                cardImage="imgs/styledPP.png"
+                cardTitle="Web App Dashboard Concept"
+                cardDescription="Wardrobe app concept user Dashboard designed in Adobe xD with original photography"
+                dribbleURL="https://dribbble.com/shots/13904483-Profile-Page-styld-app-concept"
+              />
+            </Grid>
           </Grid>
 
           <Footer />
