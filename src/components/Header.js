@@ -23,7 +23,8 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginBottom: "7rem"
   }
 });
 

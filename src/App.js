@@ -22,57 +22,42 @@ function App() {
     },
   });
   const useStyles = makeStyles({
-    root: {
-      flexGrow: 1,
+    app: {
+      // height: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      padding: "1rem",
     },
     topBar: {
       display: "flex",
       flexDirection: "row",
       justifyContent: "flex-end",
     },
-    gridColumn: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'flex-start',
-      padding: '2rem'
-    },
-    gridRow: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'flex-start',
-    },
     heading2: {
       display: "flex",
       flexDirection: "row",
-      alignSelf: "flex-start",
+      alignSelf: "center",
       fontSize: "1.3rem",
       fontWeight: "300",
-      marginTop: "1rem",
+      paddingBottom: "0",
+      marginBottom: ""
     },
     subtitle: {
       fontSize: "0.8rem",
       fontWeight: "400",
     },
-    container: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      textAlign: "center",
-    },
+    gridContainer: {
+      margin: "3rem",
+      marginTop: "1rem"
+    }
   });
   const classes = useStyles();
 
   return (
-    <div className="App">
+    <div>
       <ThemeProvider theme={theme}>
         <Paper
-          style={{
-            // height: "100vh",
-            display: "flex",
-            flexDirection: "column",
-            padding: "1rem",
-          }}
+          className={classes.app}
         >
           <Grid
             className={classes.topBar}
@@ -92,7 +77,7 @@ function App() {
           >
             Development
           </Typography>
-          <Grid container>
+          <Grid container className={classes.gridContainer}>
             <Grid item xs={12} sm={6}>
               <DevItem
                 cardImage="imgs/git-good.png"
@@ -130,13 +115,13 @@ function App() {
           >
             Design
           </Typography>
-          <Grid container>
+          <Grid container className={classes.gridContainer}>
             <Grid item xs={12} sm={6}>
               <DesignItem
                 cardImage="imgs/tulips-concept.png"
                 cardTitle="Shoe Product Page Concept"
                 cardDescription="Product landing page concept made in Adobe XD | featuring my product photography"
-                dribbleURL="https://markohanesian.github.io/markohanesian/"
+                dribbleURL="https://dribbble.com/shots/14062665-Tulips-homepage-concept"
               />
             </Grid>
             <Grid item xs={12} sm={6}>
