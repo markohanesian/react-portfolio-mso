@@ -10,7 +10,7 @@ import "./App.css";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 // Development items
-import DevItem from "./components/DevItem";
+import Item from "./components/Item";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,7 +23,7 @@ function App() {
     root: {
       flexGrow: 1,
     },
-    topBar:{
+    topBar: {
       display: "flex",
       flexDirection: "row",
       justifyContent: "flex-end",
@@ -80,41 +80,63 @@ function App() {
               onChange={() => setDarkMode(!darkMode)}
             ></Switch>
           </Grid>
-            <Header />
-            <Grid>
-              <Typography
-                  className={classes.heading2}
-                  variant="h2"
-                  component="h2"
-                  gutterBottom
-                >
-                  Development
-              </Typography>
-              <Grid container>
-                <Grid item xs={12} sm={6}>
-                  <DevItem
-                    cardImage="imgs/git-good.png"
-                    cardTitle="Git Good"
-                    cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                <DevItem
-                  cardImage="imgs/tetris-mso.png"
-                  cardTitle="tetris-mso"
-                  cardDescription="Inspired by the original Tetris game, playable with your keyboard, built with vanilla javascript"
-                />
-                </Grid>
-              </Grid>
-              <Typography
-                  className={classes.heading2}
-                  variant="h2"
-                  component="h2"
-                  gutterBottom
-                >
-                  Design
-              </Typography>
+          <Header />
+          {/* Development Section */}
+          <Typography
+            className={classes.heading2}
+            variant="h2"
+            component="h2"
+            gutterBottom
+          >
+            Development
+          </Typography>
+          <Grid container>
+            <Grid item xs={12} sm={6}>
+              <Item
+                cardImage="imgs/git-good.png"
+                cardTitle="Git Good"
+                cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
+                deployURL="http://gitgood.me/"
+                codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
+              />
             </Grid>
+            <Grid item xs={12} sm={6}>
+              <Item
+                cardImage="imgs/tetris-mso.png"
+                cardTitle="tetris-mso"
+                cardDescription="Inspired by the original Tetris game, playable with your keyboard, built with vanilla javascript"
+                deployURL="https://markohanesian.github.io/tetris-mso/"
+                codeURL="https://github.com/markohanesian/tetris-mso"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Item
+                cardImage="imgs/weather-dashboard.png"
+                cardTitle="Weather Dashboard"
+                cardDescription="Find the current weather for any major US City - powered by Weather API"
+                deployURL="https://weather-dashboard-mso.netlify.app/"
+                codeURL="https://github.com/markohanesian/Weather-Dashboard"
+              />
+            </Grid>
+          </Grid>
+          {/* Design Section */}
+          <Typography
+            className={classes.heading2}
+            variant="h2"
+            component="h2"
+            gutterBottom
+          >
+            Design
+          </Typography>
+          <Grid container>
+            <Grid item xs={12} sm={6}>
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+            </Grid>
+
+          </Grid>
+
           <Footer />
         </Paper>
       </ThemeProvider>
