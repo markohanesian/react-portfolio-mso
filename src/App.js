@@ -10,7 +10,7 @@ import "./App.css";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 // Development items
-import Item from "./components/Item";
+import DevItem from "./components/DevItem";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -92,7 +92,7 @@ function App() {
           </Typography>
           <Grid container>
             <Grid item xs={12} sm={6}>
-              <Item
+              <DevItem
                 cardImage="imgs/git-good.png"
                 cardTitle="Git Good"
                 cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
@@ -101,7 +101,7 @@ function App() {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Item
+              <DevItem
                 cardImage="imgs/tetris-mso.png"
                 cardTitle="tetris-mso"
                 cardDescription="Inspired by the original Tetris game, playable with your keyboard, built with vanilla javascript"
@@ -110,7 +110,7 @@ function App() {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Item
+              <DevItem
                 cardImage="imgs/weather-dashboard.png"
                 cardTitle="Weather Dashboard"
                 cardDescription="Find the current weather for any major US City - powered by Weather API"
