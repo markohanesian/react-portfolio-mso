@@ -52,7 +52,7 @@ function App() {
       fontWeight: "400",
     },
     gridContainer: {
-      margin: "3rem",
+      flexGrow: 1,
       marginTop: "1rem"
     },
     gridColumn: {
@@ -82,19 +82,19 @@ function App() {
           </Grid>
           <Header />
           {/* Development Section */}
-          <Grid className={classes.gridColumn}>
-            <CodeIcon style={{fontSize: "72px"}}/>
-            <Typography
-              className={classes.heading2}
-              variant="h2"
-              component="h2"
-              gutterBottom
-            >
-              Development
-            </Typography>
-          </Grid>
-          <Grid container className={classes.gridContainer}>
-            <Grid item xs={12} sm={6}>
+          <Grid className={classes.gridContainer}>
+            <Grid className={classes.gridColumn}>
+              <CodeIcon style={{fontSize: "72px"}}/>
+              <Typography
+                className={classes.heading2}
+                variant="h2"
+                component="h2"
+                gutterBottom
+              >
+                Development
+              </Typography>
+            </Grid>
+            <Grid>
               <DevItem
                 cardImage="item-images/git-good.png"
                 cardTitle="Git Good"
@@ -103,7 +103,7 @@ function App() {
                 codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid>
               <DevItem
                 cardImage="item-images/tetris-mso.png"
                 cardTitle="tetris-mso"
@@ -112,7 +112,7 @@ function App() {
                 codeURL="https://github.com/markohanesian/tetris-mso"
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid>
               <DevItem
                 cardImage="item-images/weather-dashboard.png"
                 cardTitle="Weather Dashboard"
@@ -123,49 +123,51 @@ function App() {
             </Grid>
           </Grid>
           {/* Design Section */}
-          <Grid className={classes.gridColumn}>
-            <BrushIcon style={{fontSize: "72px"}}/>
-            <Typography
-              className={classes.heading2}
-              variant="h2"
-              component="h2"
-              gutterBottom
-            >
-              Design
-            </Typography>
-          </Grid>
-          <Grid container className={classes.gridContainer}>
-            <Grid item xs={12} sm={6}>
-              <DesignItem
-                cardImage="item-images/tulips-concept.png"
-                cardTitle="Shoe Product Page Concept"
-                cardDescription="Product landing page concept made in Adobe XD | featuring my product photography"
-                dribbleURL="https://dribbble.com/shots/14062665-Tulips-homepage-concept"
-              />
+          <Grid className={classes.gridContainer}>  
+            <Grid className={classes.gridColumn}>
+              <BrushIcon style={{fontSize: "72px"}}/>
+              <Typography
+                className={classes.heading2}
+                variant="h2"
+                component="h2"
+                gutterBottom
+              >
+                Design
+              </Typography>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <DesignItem
-                cardImage="item-images/hisherswatches.jpg"
-                cardTitle="Apple Watch Faces Concept"
-                cardDescription="Apple Watch faces concept designed in Adobe xD and Photoshop"
-                dribbleURL="https://dribbble.com/shots/13774573-Apple-Watch-Face-Concept-Rose-Gold-His-Hers?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Apple%20Watch%20Face%20Concept%20-%20Rose%20Gold%20His%20%2B%20Hers&utm_medium=Social_Share"
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <DesignItem
-                cardImage="item-images/signup-pgp.png"
-                cardTitle="App Signup Page Concept"
-                cardDescription="Mobile-friendly signup form conceptdesigned in Adobe xD"
-                dribbleURL="https://dribbble.com/shots/13495221-Signup-Form-Concept-Project-Golden-Phoenix?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Signup%20Form%20Concept%20-%20Project%20Golden%20Phoenix&utm_medium=Social_Share"
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <DesignItem
-                cardImage="item-images/styledPP.png"
-                cardTitle="Web App Dashboard Concept"
-                cardDescription="Wardrobe app concept user Dashboard designed in Adobe xD with original photography"
-                dribbleURL="https://dribbble.com/shots/13904483-Profile-Page-styld-app-concept"
-              />
+            <Grid container className={classes.gridContainer}>
+              <Grid>
+                <DesignItem
+                  cardImage="item-images/tulips-concept.png"
+                  cardTitle="Shoe Product Page Concept"
+                  cardDescription="Product landing page concept made in Adobe XD | featuring my product photography"
+                  dribbleURL="https://dribbble.com/shots/14062665-Tulips-homepage-concept"
+                />
+              </Grid>
+              <Grid>
+                <DesignItem
+                  cardImage="item-images/hisherswatches.jpg"
+                  cardTitle="Apple Watch Faces Concept"
+                  cardDescription="Apple Watch faces concept designed in Adobe xD and Photoshop"
+                  dribbleURL="https://dribbble.com/shots/13774573-Apple-Watch-Face-Concept-Rose-Gold-His-Hers?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Apple%20Watch%20Face%20Concept%20-%20Rose%20Gold%20His%20%2B%20Hers&utm_medium=Social_Share"
+                />
+              </Grid>
+              <Grid>
+                <DesignItem
+                  cardImage="item-images/signup-pgp.png"
+                  cardTitle="App Signup Page Concept"
+                  cardDescription="Mobile-friendly signup form conceptdesigned in Adobe xD"
+                  dribbleURL="https://dribbble.com/shots/13495221-Signup-Form-Concept-Project-Golden-Phoenix?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Signup%20Form%20Concept%20-%20Project%20Golden%20Phoenix&utm_medium=Social_Share"
+                />
+              </Grid>
+              <Grid>
+                <DesignItem
+                  cardImage="item-images/styledPP.png"
+                  cardTitle="Web App Dashboard Concept"
+                  cardDescription="Wardrobe app concept user Dashboard designed in Adobe xD with original photography"
+                  dribbleURL="https://dribbble.com/shots/13904483-Profile-Page-styld-app-concept"
+                />
+              </Grid>
             </Grid>
           </Grid>
           {/* <ImageGallery/>, */}
