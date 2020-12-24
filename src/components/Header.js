@@ -23,8 +23,9 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    alignItems: "center",
     textAlign: 'center',
-    marginBottom: "7rem"
+    marginBottom: "2rem"
   }
 });
 
