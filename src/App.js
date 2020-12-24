@@ -15,7 +15,8 @@ import DevItem from "./components/DevItem";
 import DesignItem from "./components/DesignItem";
 // Photography Image Gallery
 // import ImageGallery from "./components/ImageGallery";
-// Icons for sections
+// Icons 
+import Brightness4Icon from '@material-ui/icons/Brightness4';
 import CodeIcon from '@material-ui/icons/Code';
 import BrushIcon from '@material-ui/icons/Brush';
 
@@ -37,6 +38,7 @@ function App() {
       display: "flex",
       flexDirection: "row",
       justifyContent: "flex-end",
+      alignItems: "center"
     },
     heading2: {
       display: "flex",
@@ -79,6 +81,7 @@ function App() {
               checked={darkMode}
               onChange={() => setDarkMode(!darkMode)}
             ></Switch>
+            <Brightness4Icon style={{fontSize: "26px"}}/>
           </Grid>
           <Header />
           {/* Development Section */}
