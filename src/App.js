@@ -96,7 +96,7 @@ function App() {
           <Grid container className={classes.gridContainer}>
             <Grid item xs={12} sm={6}>
               <DevItem
-                cardImage="imgs/git-good.png"
+                cardImage="item-images/git-good.png"
                 cardTitle="Git Good"
                 cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
                 deployURL="http://gitgood.me/"
@@ -105,7 +105,7 @@ function App() {
             </Grid>
             <Grid item xs={12} sm={6}>
               <DevItem
-                cardImage="imgs/tetris-mso.png"
+                cardImage="item-images/tetris-mso.png"
                 cardTitle="tetris-mso"
                 cardDescription="Inspired by the original Tetris game, playable with your keyboard, built with vanilla javascript"
                 deployURL="https://markohanesian.github.io/tetris-mso/"
@@ -114,7 +114,7 @@ function App() {
             </Grid>
             <Grid item xs={12} sm={6}>
               <DevItem
-                cardImage="imgs/weather-dashboard.png"
+                cardImage="item-images/weather-dashboard.png"
                 cardTitle="Weather Dashboard"
                 cardDescription="Find the current weather for any major US City - powered by Weather API"
                 deployURL="https://weather-dashboard-mso.netlify.app/"
@@ -137,7 +137,7 @@ function App() {
           <Grid container className={classes.gridContainer}>
             <Grid item xs={12} sm={6}>
               <DesignItem
-                cardImage="imgs/tulips-concept.png"
+                cardImage="item-images/tulips-concept.png"
                 cardTitle="Shoe Product Page Concept"
                 cardDescription="Product landing page concept made in Adobe XD | featuring my product photography"
                 dribbleURL="https://dribbble.com/shots/14062665-Tulips-homepage-concept"
@@ -145,7 +145,7 @@ function App() {
             </Grid>
             <Grid item xs={12} sm={6}>
               <DesignItem
-                cardImage="imgs/hisherswatches.jpg"
+                cardImage="item-images/hisherswatches.jpg"
                 cardTitle="Apple Watch Faces Concept"
                 cardDescription="Apple Watch faces concept designed in Adobe xD and Photoshop"
                 dribbleURL="https://dribbble.com/shots/13774573-Apple-Watch-Face-Concept-Rose-Gold-His-Hers?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Apple%20Watch%20Face%20Concept%20-%20Rose%20Gold%20His%20%2B%20Hers&utm_medium=Social_Share"
@@ -153,7 +153,7 @@ function App() {
             </Grid>
             <Grid item xs={12} sm={6}>
               <DesignItem
-                cardImage="imgs/signup-pgp.png"
+                cardImage="item-images/signup-pgp.png"
                 cardTitle="App Signup Page Concept"
                 cardDescription="Mobile-friendly signup form conceptdesigned in Adobe xD"
                 dribbleURL="https://dribbble.com/shots/13495221-Signup-Form-Concept-Project-Golden-Phoenix?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Signup%20Form%20Concept%20-%20Project%20Golden%20Phoenix&utm_medium=Social_Share"
@@ -161,7 +161,7 @@ function App() {
             </Grid>
             <Grid item xs={12} sm={6}>
               <DesignItem
-                cardImage="imgs/styledPP.png"
+                cardImage="item-images/styledPP.png"
                 cardTitle="Web App Dashboard Concept"
                 cardDescription="Wardrobe app concept user Dashboard designed in Adobe xD with original photography"
                 dribbleURL="https://dribbble.com/shots/13904483-Profile-Page-styld-app-concept"
