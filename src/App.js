@@ -13,6 +13,11 @@ import Footer from "../src/components/Footer";
 import DevItem from "./components/DevItem";
 // Design Items
 import DesignItem from "./components/DesignItem";
+// Photography Image Gallery
+// import ImageGallery from "./components/ImageGallery";
+// Icons for sections
+import CodeIcon from '@material-ui/icons/Code';
+import BrushIcon from '@material-ui/icons/Brush';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -49,7 +54,15 @@ function App() {
     gridContainer: {
       margin: "3rem",
       marginTop: "1rem"
-    }
+    },
+    gridColumn: {
+      display: "flex", 
+      flexDirection: "column", 
+      justifyContent: "center", 
+      alignItems: "center",
+      padding: "1rem"
+    },
+  
   });
   const classes = useStyles();
 
@@ -69,14 +82,17 @@ function App() {
           </Grid>
           <Header />
           {/* Development Section */}
-          <Typography
-            className={classes.heading2}
-            variant="h2"
-            component="h2"
-            gutterBottom
-          >
-            Development
-          </Typography>
+          <Grid className={classes.gridColumn}>
+            <CodeIcon style={{fontSize: "72px"}}/>
+            <Typography
+              className={classes.heading2}
+              variant="h2"
+              component="h2"
+              gutterBottom
+            >
+              Development
+            </Typography>
+          </Grid>
           <Grid container className={classes.gridContainer}>
             <Grid item xs={12} sm={6}>
               <DevItem
@@ -107,14 +123,17 @@ function App() {
             </Grid>
           </Grid>
           {/* Design Section */}
-          <Typography
-            className={classes.heading2}
-            variant="h2"
-            component="h2"
-            gutterBottom
-          >
-            Design
-          </Typography>
+          <Grid className={classes.gridColumn}>
+            <BrushIcon style={{fontSize: "72px"}}/>
+            <Typography
+              className={classes.heading2}
+              variant="h2"
+              component="h2"
+              gutterBottom
+            >
+              Design
+            </Typography>
+          </Grid>
           <Grid container className={classes.gridContainer}>
             <Grid item xs={12} sm={6}>
               <DesignItem
@@ -149,7 +168,7 @@ function App() {
               />
             </Grid>
           </Grid>
-
+          {/* <ImageGallery/>, */}
           <Footer />
         </Paper>
       </ThemeProvider>

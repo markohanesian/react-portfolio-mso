@@ -48,7 +48,15 @@ export default function Header() {
         color="textSecondary"
         component="p"
       >
-        Full Stack Developer ++ Designer
+        Full Stack Developer | Designer | Photographer
+      </Typography>
+      <Typography
+        className={classes.subtitle}
+        variant="body2"
+        color="textSecondary"
+        component="p"
+      >
+        Visit my photography site <a href="https://mark.squarespace.com/">here</a>
       </Typography>
     </div>
   );
