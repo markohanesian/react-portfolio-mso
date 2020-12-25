@@ -29,6 +29,9 @@ function App() {
     },
   });
   const useStyles = makeStyles({
+    root: {
+      flexGrow: 1,
+    },
     app: {
       // height: "100vh",
       display: "flex",
@@ -48,7 +51,6 @@ function App() {
       fontSize: "1.3rem",
       fontWeight: "300",
       paddingBottom: "0",
-      marginBottom: ""
     },
     subtitle: {
       fontSize: "0.8rem",
@@ -56,7 +58,10 @@ function App() {
     },
     gridContainer: {
       flexGrow: 1,
-      marginTop: "1rem"
+      marginTop: "1rem",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center"      
     },
     gridColumn: {
       display: "flex", 
@@ -70,7 +75,7 @@ function App() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.root}>
       <ThemeProvider theme={theme}>
         <Paper
           className={classes.app}
@@ -88,7 +93,7 @@ function App() {
           {/* Development Section */}
           <Grid className={classes.gridContainer}>
             <Grid className={classes.gridColumn}>
-              <CodeIcon style={{fontSize: "72px"}}/>
+              <CodeIcon style={{fontSize: "36px"}}/>
               <Typography
                 className={classes.heading2}
                 variant="h2"
@@ -98,9 +103,8 @@ function App() {
                 Development
               </Typography>
             </Grid>
-            <Grid container className={classes.gridContainer}>
-
-              <Grid>
+            <Grid container>
+              <Grid item xs={12} sm={6}>
                 <DevItem
                   cardImage="item-images/git-good.png"
                   cardTitle="Git Good"
@@ -109,7 +113,7 @@ function App() {
                   codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
                 />
               </Grid>
-              <Grid>
+              <Grid item xs={12} sm={6}>
                 <DevItem
                   cardImage="item-images/tetris-mso.png"
                   cardTitle="tetris-mso"
@@ -118,7 +122,7 @@ function App() {
                   codeURL="https://github.com/markohanesian/tetris-mso"
                 />
               </Grid>
-              <Grid>
+              <Grid item xs={12} sm={6}>
                 <DevItem
                   cardImage="item-images/weather-dashboard.png"
                   cardTitle="Weather Dashboard"
@@ -132,7 +136,7 @@ function App() {
           {/* Design Section */}
           <Grid className={classes.gridContainer}>  
             <Grid className={classes.gridColumn}>
-              <BrushIcon style={{fontSize: "72px"}}/>
+              <BrushIcon style={{fontSize: "36px"}}/>
               <Typography
                 className={classes.heading2}
                 variant="h2"
@@ -142,8 +146,8 @@ function App() {
                 Design
               </Typography>
             </Grid>
-            <Grid container className={classes.gridContainer}>
-              <Grid>
+            <Grid container>
+              <Grid item xs={12} sm={6}>
                 <DesignItem
                   cardImage="item-images/tulips-concept.png"
                   cardTitle="Shoe Product Page Concept"
@@ -151,7 +155,7 @@ function App() {
                   dribbleURL="https://dribbble.com/shots/14062665-Tulips-homepage-concept"
                 />
               </Grid>
-              <Grid>
+              <Grid item xs={12} sm={6}>
                 <DesignItem
                   cardImage="item-images/hisherswatches.jpg"
                   cardTitle="Apple Watch Faces Concept"
@@ -159,7 +163,7 @@ function App() {
                   dribbleURL="https://dribbble.com/shots/13774573-Apple-Watch-Face-Concept-Rose-Gold-His-Hers?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Apple%20Watch%20Face%20Concept%20-%20Rose%20Gold%20His%20%2B%20Hers&utm_medium=Social_Share"
                 />
               </Grid>
-              <Grid>
+              <Grid item xs={12} sm={6}>
                 <DesignItem
                   cardImage="item-images/signup-pgp.png"
                   cardTitle="App Signup Page Concept"
@@ -167,7 +171,7 @@ function App() {
                   dribbleURL="https://dribbble.com/shots/13495221-Signup-Form-Concept-Project-Golden-Phoenix?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Signup%20Form%20Concept%20-%20Project%20Golden%20Phoenix&utm_medium=Social_Share"
                 />
               </Grid>
-              <Grid>
+              <Grid item xs={12} sm={6}>
                 <DesignItem
                   cardImage="item-images/styledPP.png"
                   cardTitle="Web App Dashboard Concept"
@@ -180,7 +184,7 @@ function App() {
           {/* Photography Section */}
           <Grid className={classes.gridContainer}>  
             <Grid className={classes.gridColumn}>
-              <CameraAltIcon style={{fontSize: "72px"}}/>
+              <CameraAltIcon style={{fontSize: "36px"}}/>
               <Typography
                 className={classes.heading2}
                 variant="h2"
