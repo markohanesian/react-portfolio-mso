@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -27,6 +29,19 @@ export default function AutoGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={0}>
+      <Grid item xs={12}>
+          <Paper className={classes.paper}>
+            <Typography
+            className={classes.subtitle}
+            variant="body2"
+            color="textSecondary"
+            component="p"
+          >
+            Visit my photography site<Button color="secondary" href="https://mark.squarespace.com/">Here</Button>
+
+          </Typography>
+          </Paper>
+        </Grid>
         <Grid item xs={6} sm={3}>
           <Paper className={classes.paper}><img className={classes.image} src="gallery-images/karine-bottle.jpg" alt="bottle"></img></Paper>
         </Grid>
