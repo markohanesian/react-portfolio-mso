@@ -1,19 +1,24 @@
-import React from 'react';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+import React from "react";
+import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1,
+      flexGrow: 1
     },
     paper: {
       padding: theme.spacing(2),
-      textAlign: 'center',
+      textAlign: "center",
       color: theme.palette.text.secondary,
     },
-  }),
+    image: {
+      display: "flex",
+      height: "auto",
+      width: "100%"
+    }
+  })
 );
 
 export default function AutoGrid() {
@@ -21,15 +26,18 @@ export default function AutoGrid() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs>
-          <Paper className={classes.paper}>xs</Paper>
+      <Grid container spacing={0}>
+        <Grid item xs={6} sm={3}>
+          <Paper className={classes.paper}><img className={classes.image} src="gallery-images/karine-bottle.jpg" alt="bottle"></img></Paper>
         </Grid>
-        <Grid item xs>
-          <Paper className={classes.paper}>xs</Paper>
+        <Grid item xs={6} sm={3}>
+          <Paper className={classes.paper}><img className={classes.image} src="gallery-images/shirts.jpg" alt="portrait"></img></Paper>
         </Grid>
-        <Grid item xs>
-          <Paper className={classes.paper}>xs</Paper>
+        <Grid item xs={6} sm={3}>
+          <Paper className={classes.paper}><img className={classes.image} src="gallery-images/stella-fashion.jpg" alt=""></img></Paper>
+        </Grid>
+        <Grid item xs={6} sm={3}>
+          <Paper className={classes.paper}><img className={classes.image} src="gallery-images/corin-portrait.jpg" alt=""></img></Paper>
         </Grid>
       </Grid>
     </div>

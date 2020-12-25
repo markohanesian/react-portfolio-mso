@@ -14,11 +14,12 @@ import DevItem from "./components/DevItem";
 // Design Items
 import DesignItem from "./components/DesignItem";
 // Photography Image Gallery
-// import ImageGallery from "./components/ImageGallery";
+import Gallery from "./components/Gallery";
 // Icons 
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import CodeIcon from '@material-ui/icons/Code';
 import BrushIcon from '@material-ui/icons/Brush';
+import CameraAltIcon from '@material-ui/icons/CameraAlt';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -97,32 +98,35 @@ function App() {
                 Development
               </Typography>
             </Grid>
-            <Grid>
-              <DevItem
-                cardImage="item-images/git-good.png"
-                cardTitle="Git Good"
-                cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
-                deployURL="http://gitgood.me/"
-                codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
-              />
-            </Grid>
-            <Grid>
-              <DevItem
-                cardImage="item-images/tetris-mso.png"
-                cardTitle="tetris-mso"
-                cardDescription="Inspired by the original Tetris game, playable with your keyboard, built with vanilla javascript"
-                deployURL="https://markohanesian.github.io/tetris-mso/"
-                codeURL="https://github.com/markohanesian/tetris-mso"
-              />
-            </Grid>
-            <Grid>
-              <DevItem
-                cardImage="item-images/weather-dashboard.png"
-                cardTitle="Weather Dashboard"
-                cardDescription="Find the current weather for any major US City - powered by Weather API"
-                deployURL="https://weather-dashboard-mso.netlify.app/"
-                codeURL="https://github.com/markohanesian/Weather-Dashboard"
-              />
+            <Grid container className={classes.gridContainer}>
+
+              <Grid>
+                <DevItem
+                  cardImage="item-images/git-good.png"
+                  cardTitle="Git Good"
+                  cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
+                  deployURL="http://gitgood.me/"
+                  codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
+                />
+              </Grid>
+              <Grid>
+                <DevItem
+                  cardImage="item-images/tetris-mso.png"
+                  cardTitle="tetris-mso"
+                  cardDescription="Inspired by the original Tetris game, playable with your keyboard, built with vanilla javascript"
+                  deployURL="https://markohanesian.github.io/tetris-mso/"
+                  codeURL="https://github.com/markohanesian/tetris-mso"
+                />
+              </Grid>
+              <Grid>
+                <DevItem
+                  cardImage="item-images/weather-dashboard.png"
+                  cardTitle="Weather Dashboard"
+                  cardDescription="Find the current weather for any major US City - powered by Weather API"
+                  deployURL="https://weather-dashboard-mso.netlify.app/"
+                  codeURL="https://github.com/markohanesian/Weather-Dashboard"
+                />
+              </Grid>
             </Grid>
           </Grid>
           {/* Design Section */}
@@ -173,7 +177,23 @@ function App() {
               </Grid>
             </Grid>
           </Grid>
-          {/* <ImageGallery/>, */}
+          {/* Photography Section */}
+          <Grid className={classes.gridContainer}>  
+            <Grid className={classes.gridColumn}>
+              <CameraAltIcon style={{fontSize: "72px"}}/>
+              <Typography
+                className={classes.heading2}
+                variant="h2"
+                component="h2"
+                gutterBottom
+              >
+                Photography
+              </Typography>
+            </Grid>
+            <Grid container className={classes.gridContainer}>
+              <Gallery />
+            </Grid>
+          </Grid>
           <Footer />
         </Paper>
       </ThemeProvider>
