@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Navbar from "./NavBar";
 
 const useStyles = makeStyles({
   image: {
@@ -52,7 +51,6 @@ export default function Header() {
       >
         Full Stack Developer | Designer | Photographer
       </Typography>
-      <Navbar />
     </div>
   );
 }
