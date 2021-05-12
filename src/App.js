@@ -104,6 +104,16 @@ function App() {
               </Typography>
             </Grid>
             <Grid container>
+              {/* Development Items */}
+              <Grid item xs={12} sm={6}>
+                <DevItem
+                  cardImage="item-images/react-social-preview.png"
+                  cardTitle="ReactSocial"
+                  cardDescription="Social media web app built with React and Firebase"
+                  deployURL="https://social-media-app-mso.web.app/"
+                  codeURL="https://github.com/markohanesian/ReactSocial"
+                />
+              </Grid>
               <Grid item xs={12} sm={6}>
                 <DevItem
                   cardImage="item-images/git-good.png"
