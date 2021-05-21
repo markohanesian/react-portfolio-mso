@@ -11,7 +11,7 @@ export default function CurrentYear() {
 
     return (
         <div>
-            <p style={CurrentYearStyle}>{year}</p>
+            <p style={CurrentYearStyle}>{year} Mark Ohanesian</p>
         </div>
     )
 };

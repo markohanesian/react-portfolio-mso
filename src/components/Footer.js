@@ -38,8 +38,8 @@ export default function Footer() {
       <Grid position="relative" color="primary" className={classes.footer}>
         <Toolbar>
           <div>
-            <Typography variant="body1" color="black" gutterBottom>
-                <CurrentYear />Mark Ohanesian
+            <Typography variant="body1" color="black" noWrap>
+                <CurrentYear />
               </Typography>
           </div>
           <div className={classes.grow} />
