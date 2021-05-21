@@ -10,8 +10,6 @@ export default function CurrentYear() {
     var year = today.getFullYear();
 
     return (
-        <div>
             <p style={CurrentYearStyle}>{year} Mark Ohanesian</p>
-        </div>
     )
 };
