@@ -70,6 +70,10 @@ function App() {
       alignItems: "center",
       padding: "1rem"
     },
+    SectionIcon: {
+      margin: '2rem 0 0 0',
+      fontSize: '3rem',
+    }
   
   });
   const classes = useStyles();
@@ -93,7 +97,7 @@ function App() {
           {/* Development Section */}
           <Grid className={classes.gridContainer}>
             <Grid className={classes.gridColumn}>
-              <CodeIcon style={{fontSize: "36px"}}/>
+              <CodeIcon className={classes.SectionIcon}/>
               <Typography
                 className={classes.heading2}
                 variant="h2"
@@ -146,7 +150,7 @@ function App() {
           {/* Design Section */}
           <Grid className={classes.gridContainer}>  
             <Grid className={classes.gridColumn}>
-              <BrushIcon style={{fontSize: "36px"}}/>
+              <BrushIcon className={classes.SectionIcon}/>
               <Typography
                 className={classes.heading2}
                 variant="h2"
@@ -194,7 +198,7 @@ function App() {
           {/* Photography Section */}
           <Grid className={classes.gridContainer}>  
             <Grid className={classes.gridColumn}>
-              <CameraAltIcon style={{fontSize: "36px"}}/>
+              <CameraAltIcon className={classes.SectionIcon}/>
               <Typography
                 className={classes.heading2}
                 variant="h2"
