@@ -49,7 +49,7 @@ export default function Footer() {
           <IconButton className={classes.icon} href="https://github.com/markohanesian">
             <GitHubIcon />
           </IconButton>
-          <IconButton className={classes.icon} href="https://github.com/markohanesian/git-cheatsheet-mso">
+          <IconButton className={classes.icon} href="https://www.linkedin.com/in/mark-ohanesian/">
             <LinkedInIcon />
           </IconButton>
         </Toolbar>
