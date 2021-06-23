@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Grid, Typography, Paper, BottomNavigation, BottomNavigationAction } from "@material-ui/core";
+import { Grid, Paper, BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import {
   ThemeProvider,
@@ -15,14 +15,11 @@ import Footer from "../src/components/Footer";
 import DevItem from "./components/DevItem";
 // Design Items
 import DesignItem from "./components/DesignItem";
-// Photography Image Gallery
-import Gallery from "./components/Gallery";
 // Icons 
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import CodeIcon from '@material-ui/icons/Code';
 import BrushIcon from '@material-ui/icons/Brush';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
-import HomeIcon from '@material-ui/icons/Home';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -81,23 +78,17 @@ function App() {
   });
   const classes = useStyles();
 
-  const [value, setValue] = React.useState(0);
-
   const NavBar = (
     <Grid container>
       <Grid item xs={12}>
         <BottomNavigation
-          value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
           showLabels
           className={classes.bottomNav}
         >
-          <BottomNavigationAction icon={<HomeIcon />} className={classes.navbutton} href="/" label="Home" />
-          <BottomNavigationAction icon={<CodeIcon />} className={classes.navbutton} href="/development" label="development" />
-          <BottomNavigationAction icon={<BrushIcon />}className={classes.navbutton} href="/design" label="design" />
-          <BottomNavigationAction icon={<CameraAltIcon />} className={classes.navbutton} href="/photography" label="photography" />
+          {/* <BottomNavigationAction icon={<HomeIcon />} className={classes.navbutton} href="/" label="Home" /> */}
+          <BottomNavigationAction icon={<CodeIcon />} href="/" label="development" />
+          <BottomNavigationAction icon={<BrushIcon />} href="/design" label="design" />
+          <BottomNavigationAction icon={<CameraAltIcon />} target="_blank" href="https://mark.squarespace.com/" label="photography" />
         </BottomNavigation>
       </Grid>
     </Grid>
@@ -125,42 +116,50 @@ function App() {
               {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
               <Switch>
-                <Route path="/photography">
-                  {/* Photography Section */}
+                <Route path="/design">
+                  {/* Design Section */}
                   {NavBar}
-
                   <Grid className={classes.gridContainer}>
-                    <Grid className={classes.gridColumn}>
-                      <CameraAltIcon className={classes.SectionIcon} />
-                      <Typography
-                        className={classes.heading2}
-                        variant="h2"
-                        component="h2"
-                        gutterBottom
-                      >
-                        Photography
-                      </Typography>
-                    </Grid>
-                    <Grid container className={classes.gridContainer}>
-                      <Gallery />
+                    <Grid container>
+                      <Grid item xs={12} sm={6}>
+                        <DesignItem
+                          cardImage="item-images/tulips-concept.png"
+                          cardTitle="Shoe Product Page Concept"
+                          cardDescription="Product landing page concept made in Adobe XD | featuring my product photography"
+                          dribbleURL="https://dribbble.com/shots/14062665-Tulips-homepage-concept"
+                        />
+                      </Grid>
+                      <Grid item xs={12} sm={6}>
+                        <DesignItem
+                          cardImage="item-images/hisherswatches.jpg"
+                          cardTitle="Apple Watch Faces Concept"
+                          cardDescription="Apple Watch faces concept designed in Adobe xD and Photoshop"
+                          dribbleURL="https://dribbble.com/shots/13774573-Apple-Watch-Face-Concept-Rose-Gold-His-Hers?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Apple%20Watch%20Face%20Concept%20-%20Rose%20Gold%20His%20%2B%20Hers&utm_medium=Social_Share"
+                        />
+                      </Grid>
+                      <Grid item xs={12} sm={6}>
+                        <DesignItem
+                          cardImage="item-images/signup-pgp.png"
+                          cardTitle="App Signup Page Concept"
+                          cardDescription="Mobile-friendly signup form conceptdesigned in Adobe xD"
+                          dribbleURL="https://dribbble.com/shots/13495221-Signup-Form-Concept-Project-Golden-Phoenix?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Signup%20Form%20Concept%20-%20Project%20Golden%20Phoenix&utm_medium=Social_Share"
+                        />
+                      </Grid>
+                      <Grid item xs={12} sm={6}>
+                        <DesignItem
+                          cardImage="item-images/styledPP.png"
+                          cardTitle="Web App Dashboard Concept"
+                          cardDescription="Wardrobe app concept user Dashboard designed in Adobe xD with original photography"
+                          dribbleURL="https://dribbble.com/shots/13904483-Profile-Page-styld-app-concept"
+                        />
+                      </Grid>
                     </Grid>
                   </Grid>
                 </Route>
-                <Route path="/development">
+                <Route path="/">
                   {/* Development Section */}
                   {NavBar}
                   <Grid className={classes.gridContainer}>
-                    <Grid className={classes.gridColumn}>
-                      <CodeIcon className={classes.SectionIcon} />
-                      <Typography
-                        className={classes.heading2}
-                        variant="h2"
-                        component="h2"
-                        gutterBottom
-                      >
-                        Development
-                      </Typography>
-                    </Grid>
                     <Grid container>
                       {/* Development Items */}
                       <Grid item xs={12} sm={6}>
@@ -202,67 +201,9 @@ function App() {
                     </Grid>
                   </Grid>
                 </Route>
-                <Route path="/design">
-                  {/* Design Section */}
-                  {NavBar}
-                  <Grid className={classes.gridContainer}>
-                    <Grid className={classes.gridColumn}>
-                      <BrushIcon className={classes.SectionIcon} />
-                      <Typography
-                        className={classes.heading2}
-                        variant="h2"
-                        component="h2"
-                        gutterBottom
-                      >
-                        Design
-                      </Typography>
-                    </Grid>
-                    <Grid container>
-                      <Grid item xs={12} sm={6}>
-                        <DesignItem
-                          cardImage="item-images/tulips-concept.png"
-                          cardTitle="Shoe Product Page Concept"
-                          cardDescription="Product landing page concept made in Adobe XD | featuring my product photography"
-                          dribbleURL="https://dribbble.com/shots/14062665-Tulips-homepage-concept"
-                        />
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
-                        <DesignItem
-                          cardImage="item-images/hisherswatches.jpg"
-                          cardTitle="Apple Watch Faces Concept"
-                          cardDescription="Apple Watch faces concept designed in Adobe xD and Photoshop"
-                          dribbleURL="https://dribbble.com/shots/13774573-Apple-Watch-Face-Concept-Rose-Gold-His-Hers?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Apple%20Watch%20Face%20Concept%20-%20Rose%20Gold%20His%20%2B%20Hers&utm_medium=Social_Share"
-                        />
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
-                        <DesignItem
-                          cardImage="item-images/signup-pgp.png"
-                          cardTitle="App Signup Page Concept"
-                          cardDescription="Mobile-friendly signup form conceptdesigned in Adobe xD"
-                          dribbleURL="https://dribbble.com/shots/13495221-Signup-Form-Concept-Project-Golden-Phoenix?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Signup%20Form%20Concept%20-%20Project%20Golden%20Phoenix&utm_medium=Social_Share"
-                        />
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
-                        <DesignItem
-                          cardImage="item-images/styledPP.png"
-                          cardTitle="Web App Dashboard Concept"
-                          cardDescription="Wardrobe app concept user Dashboard designed in Adobe xD with original photography"
-                          dribbleURL="https://dribbble.com/shots/13904483-Profile-Page-styld-app-concept"
-                        />
-                      </Grid>
-                    </Grid>
-                  </Grid>
-                </Route>
-                <Route path="/">
-                  {NavBar}
-                  <h1 style={{ fontSize: '3rem', display: 'grid', placeItems: 'center' }}>YOU ARE HOME</h1>
-                </Route>
               </Switch>
             </div>
           </Router>
-
-
-
           <Footer />
         </Paper>
       </ThemeProvider>
