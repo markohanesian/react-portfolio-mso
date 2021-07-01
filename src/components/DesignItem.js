@@ -12,8 +12,10 @@ const useStyles = makeStyles((theme: Theme) =>
     container: {
       display: 'flex',
       flexDirection: 'row',
-      alignSelf: 'flex-start',
-      margin: '1rem'
+      // alignSelf: 'flex-start',
+      margin: '1rem',
+      padding: '1rem',
+      maxWidth: '400px'
     },
     content: {
       display: 'flex',
