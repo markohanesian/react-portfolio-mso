@@ -71,7 +71,7 @@ export default function MediaControlCard(props) {
           </Typography>
         </CardContent>
         <div className={classes.buttons}>
-          <Button color="secondary" href={props.deployURL}>Deploy</Button>
+          <Button color="secondary" href={props.deployURL}>Site</Button>
           <Button color="secondary" href={props.codeURL}>Code</Button>
         </div>
       </div>
