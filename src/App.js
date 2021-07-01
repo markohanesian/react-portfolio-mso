@@ -70,6 +70,11 @@ function App() {
       alignItems: "center",
       padding: "1rem"
     },
+    DevContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
     SectionIcon: {
       margin: '2rem 0 0 0',
       fontSize: '3rem',
@@ -159,10 +164,10 @@ function App() {
                 <Route path="/">
                   {/* Development Section */}
                   {NavBar}
-                  <Grid className={classes.gridContainer}>
-                    <Grid container>
+                  <Grid className={classes.gridContainer} container>
+                    <Grid className={classes.DevContainer}>
                       {/* Development Items */}
-                      <Grid item xs={12} sm={6}>
+                     
                         <DevItem
                           cardImage="item-images/react-social-preview.png"
                           cardTitle="ReactSocial"
@@ -170,8 +175,6 @@ function App() {
                           deployURL="https://social-media-app-mso.web.app/"
                           codeURL="https://github.com/markohanesian/ReactSocial"
                         />
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
                         <DevItem
                           cardImage="item-images/git-good.png"
                           cardTitle="Git Good"
@@ -179,8 +182,7 @@ function App() {
                           deployURL="http://gitgood.me/"
                           codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
                         />
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
+      
                         <DevItem
                           cardImage="item-images/tetris-mso.png"
                           cardTitle="tetris-mso"
@@ -188,8 +190,7 @@ function App() {
                           deployURL="https://markohanesian.github.io/tetris-mso/"
                           codeURL="https://github.com/markohanesian/tetris-mso"
                         />
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
+                      
                         <DevItem
                           cardImage="item-images/weather-dashboard.png"
                           cardTitle="Weather Dashboard"
@@ -197,7 +198,6 @@ function App() {
                           deployURL="https://weather-dashboard-mso.netlify.app/"
                           codeURL="https://github.com/markohanesian/Weather-Dashboard"
                         />
-                      </Grid>
                     </Grid>
                   </Grid>
                 </Route>
