@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme: Theme) =>
       // alignSelf: 'flex-start',
       margin: '1rem',
       padding: '1rem',
-      backgroundColor: 'red',
       maxWidth: '400px'
     },
     content: {
