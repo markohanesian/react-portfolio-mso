@@ -12,15 +12,22 @@ const useStyles = makeStyles((theme: Theme) =>
     container: {
       display: 'flex',
       flexDirection: 'row',
-      alignSelf: 'flex-start',
-      margin: '1rem'
+      // alignSelf: 'flex-start',
+      margin: '1rem',
+      padding: '1rem',
+      backgroundColor: 'red',
+      maxWidth: '400px'
     },
     content: {
       display: 'flex',
       flexDirection: 'column',
-      flex: '1 0 auto',
+      // flex: '1 0 auto',
       padding: '0.5rem',
       maxWidth: '200px'
+    },
+    imageContainer: {
+      display: 'flex',
+      width: 'auto'
     },
     image: {
       width: 120,
@@ -48,11 +55,13 @@ export default function MediaControlCard(props) {
 
   return (
     <Card className={classes.container}>
-      <CardMedia
-        className={classes.image}
-        image={props.cardImage}
-        title="Git Good website image"
-      />
+      <div className={classes.imageContainer}>
+        <CardMedia
+          className={classes.image}
+          image={props.cardImage}
+          title="Git Good website image"
+        />
+      </div>
       <div className={classes.details}>
         <CardContent className={classes.content}>
           <Typography className={classes.title} component="h5" variant="h5">
