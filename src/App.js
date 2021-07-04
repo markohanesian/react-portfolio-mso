@@ -16,7 +16,6 @@ import DevItem from "./components/DevItem";
 // Design Items
 import DesignItem from "./components/DesignItem";
 // Icons 
-import Brightness4Icon from '@material-ui/icons/Brightness4';
 import CodeIcon from '@material-ui/icons/Code';
 import BrushIcon from '@material-ui/icons/Brush';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
