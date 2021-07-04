@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Grid, Paper, BottomNavigation, BottomNavigationAction } from "@material-ui/core";
-import ToggleButton from '@material-ui/lab/ToggleButton';
+import DarkModeToggle from "react-dark-mode-toggle";
 import {
   ThemeProvider,
   createMuiTheme,
@@ -108,12 +108,11 @@ function App() {
           <Grid
             className={classes.topBar}
           >
-            <ToggleButton
-              value="check"
+            <DarkModeToggle
+              size={60}
               checked={darkMode}
               onChange={() => setDarkMode(!darkMode)}
-            ></ToggleButton>
-            <Brightness4Icon style={{ fontSize: "26px" }} />
+            ></DarkModeToggle>
           </Grid>
           <Header />
           <Router>
