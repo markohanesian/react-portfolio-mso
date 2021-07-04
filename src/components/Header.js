@@ -43,14 +43,14 @@ export default function Header() {
       >
         Hello, I'm Mark
       </Typography>
-      <Typography
+      {/* <Typography
         className={classes.subtitle}
         variant="body2"
         color="textSecondary"
         component="p"
       >
         Full Stack Developer | Designer | Photographer
-      </Typography>
+      </Typography> */}
     </div>
   );
 }
