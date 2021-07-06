@@ -34,7 +34,7 @@ export default function Header() {
 
   return (
     <div className={classes.container}>
-      <img className={classes.image} src="mark-headshot.png" alt="mark"></img>
+      <img className={classes.image} src="mark-headshot.jpg" alt="mark"></img>
       <Typography
         className={classes.heading}
         gutterBottom
