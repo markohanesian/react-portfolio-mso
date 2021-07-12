@@ -16,6 +16,7 @@ const useStyles = makeStyles({
     marginTop: '1rem'
   },
   subtitle: {
+    display: 'flex',
     fontSize: "0.8rem",
     fontWeight: "400",
     width: '30rem'
