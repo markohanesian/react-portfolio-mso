@@ -18,6 +18,7 @@ const useStyles = makeStyles({
   subtitle: {
     fontSize: "0.8rem",
     fontWeight: "400",
+    width: '30rem'
   },
   container: {
     display: 'flex',
@@ -43,14 +44,14 @@ export default function Header() {
       >
         Hello, I'm Mark
       </Typography>
-      {/* <Typography
+      <Typography
         className={classes.subtitle}
         variant="body2"
         color="textSecondary"
         component="p"
       >
-        Full Stack Developer | Designer | Photographer
-      </Typography> */}
+        Enthusiastic and self-motivated full stack web developer and designer with 5+ years of web experience. Skillful communicator with experience planning, leading, and executing multiple projects with clarity and efficiency.
+      </Typography>
     </div>
   );
 }
