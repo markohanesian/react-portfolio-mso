@@ -65,7 +65,7 @@ export default function MediaControlCard(props) {
           </Typography>
         </CardContent>
         <div className={classes.buttons}>
-          <Button color="secondary" href={props.dribbleURL}>See More on Dribble</Button>
+          <Button color="secondary" href={props.dribbleURL} target="blank">See More on Dribble</Button>
         </div>
       </div>
     </Card>
