@@ -9,8 +9,14 @@ import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
-    width: 500,
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    justifyContent: 'space-between',
   },
+  NavButtons: {
+    margin: '.5rem'
+  }
 });
 
 export default function SimpleBottomNavigation() {
@@ -30,9 +36,9 @@ export default function SimpleBottomNavigation() {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction value="home"  label="Development" icon={<CodeIcon />} />
-      <BottomNavigationAction value="design"  label="Design" icon={<BrushIcon />} />
-      <BottomNavigationAction value="photography" label="Photography" icon={<CameraAlt />} />
+      <BottomNavigationAction className={classes.NavButtons} value="home"  label="Development" icon={<CodeIcon />} />
+      <BottomNavigationAction className={classes.NavButtons} value="design"  label="Design" icon={<BrushIcon />} />
+      <BottomNavigationAction className={classes.NavButtons} value="photography" label="Photography" icon={<CameraAlt />} />
     </BottomNavigation>
   );
 }
