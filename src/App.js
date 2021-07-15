@@ -110,7 +110,13 @@ function App() {
                 <Route path="/design">
                   <Grid className={classes.gridContainer} container>
                     <Grid className={classes.DevContainer}>
-                    <NavBar />
+                      <NavBar />
+                      <DesignItem
+                        cardImage="item-images/styledPP.png"
+                        cardTitle="Web App Dashboard Concept"
+                        cardDescription="Wardrobe app concept user Dashboard designed in Adobe xD with original photography"
+                        dribbleURL="https://dribbble.com/shots/13904483-Profile-Page-styld-app-concept"
+                      />
                       <DesignItem
                         cardImage="item-images/tulips-concept.png"
                         cardTitle="Shoe Product Page Concept"
@@ -130,13 +136,6 @@ function App() {
                         cardTitle="App Signup Page Concept"
                         cardDescription="Mobile-friendly signup form conceptdesigned in Adobe xD"
                         dribbleURL="https://dribbble.com/shots/13495221-Signup-Form-Concept-Project-Golden-Phoenix?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Signup%20Form%20Concept%20-%20Project%20Golden%20Phoenix&utm_medium=Social_Share"
-                      />
-
-                      <DesignItem
-                        cardImage="item-images/styledPP.png"
-                        cardTitle="Web App Dashboard Concept"
-                        cardDescription="Wardrobe app concept user Dashboard designed in Adobe xD with original photography"
-                        dribbleURL="https://dribbble.com/shots/13904483-Profile-Page-styld-app-concept"
                       />
                     </Grid>
                   </Grid>
