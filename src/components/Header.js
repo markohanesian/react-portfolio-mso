@@ -17,9 +17,11 @@ const useStyles = makeStyles({
   },
   subtitle: {
     display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     fontSize: "0.8rem",
     fontWeight: "400",
-    width: '30rem'
+    maxWidth: '20rem'
   },
   container: {
     display: 'flex',
