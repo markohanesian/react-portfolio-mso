@@ -33,8 +33,9 @@ const useStyles = makeStyles((theme: Theme) =>
       fontWeight: "400",
     },
     description: {
-      fontSize: "0.7rem",
+      fontSize: ".8rem",
       fontWeight: "400",
+      marginTop: '1rem'
     },
     buttons: {
       display: 'flex',
