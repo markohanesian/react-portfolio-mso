@@ -103,7 +103,7 @@ function App() {
             <div>
               <Switch>
                 <Route path='/photography' component={() => {
-                  window.location.href = 'https://mark.squarespace.com/';
+                  window.location.href = 'http://markohanesian.photography/';
                   return null;
                 }} />
                 {/* Design Section */}
