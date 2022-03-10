@@ -156,7 +156,7 @@ function App() {
                         cardImage="item-images/git-good.png"
                         cardTitle="Git Good"
                         cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
-                        deployURL="http://gitgood.me/"
+                        deployURL="https://git-cheatsheet-mso.netlify.app/"
                         codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
                       />
 
