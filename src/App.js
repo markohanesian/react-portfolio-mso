@@ -167,14 +167,6 @@ function App() {
                         deployURL="https://markohanesian.github.io/tetris-mso/"
                         codeURL="https://github.com/markohanesian/tetris-mso"
                       />
-
-                      <DevItem
-                        cardImage="item-images/weather-dashboard.png"
-                        cardTitle="Weather Dashboard"
-                        cardDescription="Find the current weather for any major US City - powered by Weather API"
-                        deployURL="https://weather-dashboard-mso.netlify.app/"
-                        codeURL="https://github.com/markohanesian/Weather-Dashboard"
-                      />
                     </Grid>
                   </Grid>
                 </Route>
