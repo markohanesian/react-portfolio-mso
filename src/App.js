@@ -152,6 +152,13 @@ function App() {
                         deployURL="https://social-media-app-mso.web.app/"
                         codeURL="https://github.com/markohanesian/ReactSocial"
                       />
+                       <DevItem
+                        cardImage="item-images/the-pomegranate-boutique.png"
+                        cardTitle="The Pomegranate Boutique"
+                        cardDescription="E-Commerce website using Shopify and custom liquid code"
+                        // deployURL="https://markohanesian.github.io/tetris-mso/"
+                        codeURL="https://www.thepomegranateboutique.com/"
+                      />
                       <DevItem
                         cardImage="item-images/git-good.png"
                         cardTitle="Git Good"
