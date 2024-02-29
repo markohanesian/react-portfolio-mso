@@ -73,7 +73,11 @@ export default function MediaControlCard(props) {
         </CardContent>
         <div className={classes.buttons}>
           <Button color="secondary" href={props.deployURL} target="blank">Site</Button>
-          <Button color="secondary" href={props.codeURL} target="blank">Code</Button>
+          {props.codeURL && (
+            <Button color="secondary" href={props.codeURL} target="blank">
+              Code
+            </Button>
+          )}
         </div>
       </div>
     </Card>
