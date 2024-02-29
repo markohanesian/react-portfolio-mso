@@ -156,8 +156,7 @@ function App() {
                         cardImage="item-images/the-pomegranate-boutique.png"
                         cardTitle="The Pomegranate Boutique"
                         cardDescription="E-Commerce website using Shopify and custom liquid code"
-                        // deployURL="https://markohanesian.github.io/tetris-mso/"
-                        codeURL="https://www.thepomegranateboutique.com/"
+                        deployURL="https://www.thepomegranateboutique.com/"
                       />
                       <DevItem
                         cardImage="item-images/git-good.png"
