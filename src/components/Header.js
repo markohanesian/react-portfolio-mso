@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles({
   image: {
@@ -48,12 +49,10 @@ export default function Header() {
         Hello, I'm Mark
       </Typography>
       <Typography
-        className={classes.subtitle}
-        variant="body2"
-        color="textSecondary"
+        variant="body1"
         component="p"
       >
-        Hi, I'm Mark, full stack web developer, and I made this website with ReactJS and MaterialUI.
+        I'm a full stack web developer and ui/ux designer, and I made this website with ReactJS and MaterialUI - see the source code <Button color="secondary" href="https://github.com/markohanesian/react-portfolio-mso" target="blank">Here</Button>
       </Typography>
     </div>
   );
