@@ -53,7 +53,7 @@ export default function Header() {
         color="textSecondary"
         component="p"
       >
-        Enthusiastic and self-motivated full stack web developer and designer with 5+ years of web experience. Skillful communicator with experience planning, leading, and executing multiple projects with clarity and efficiency.
+        Hi, I'm Mark, full stack web developer, and I made this website with ReactJS and MaterialUI.
       </Typography>
     </div>
   );
