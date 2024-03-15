@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core/styles";
 import "./App.css";
 // components
-import NavBar from './components/NavBar'
+import NavBar from "./components/NavBar";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 // Development items
@@ -38,7 +38,7 @@ function App() {
       display: "flex",
       flexDirection: "row",
       justifyContent: "flex-end",
-      alignItems: "center"
+      alignItems: "center",
     },
     heading2: {
       display: "flex",
@@ -53,45 +53,39 @@ function App() {
       fontWeight: "400",
     },
     bottomNav: {
-      Backgroundcolor: 'green'
-
+      Backgroundcolor: "green",
     },
     gridContainer: {
       flexGrow: 1,
       marginTop: "1rem",
       display: "flex",
       flexDirection: "column",
-      justifyContent: "center"
+      justifyContent: "center",
     },
     gridColumn: {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
-      padding: "1rem"
+      padding: "1rem",
     },
     DevContainer: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
     },
     SectionIcon: {
-      margin: '2rem 0 0 0',
-      fontSize: '3rem',
-    }
-
+      margin: "2rem 0 0 0",
+      fontSize: "3rem",
+    },
   });
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <ThemeProvider theme={theme}>
-        <Paper
-          className={classes.app}
-        >
-          <Grid
-            className={classes.topBar}
-          >
+        <Paper className={classes.app}>
+          <Grid className={classes.topBar}>
             <DarkModeToggle
               size={60}
               checked={darkMode}
@@ -102,10 +96,13 @@ function App() {
           <Router>
             <div>
               <Switch>
-                <Route path='/photography' component={() => {
-                  window.location.href = 'http://markohanesian.photography/';
-                  return null;
-                }} />
+                <Route
+                  path="/photography"
+                  component={() => {
+                    window.location.href = "http://markohanesian.photography/";
+                    return null;
+                  }}
+                />
                 {/* Design Section */}
                 <Route path="/design">
                   <Grid className={classes.gridContainer} container>
@@ -152,12 +149,6 @@ function App() {
                         deployURL="https://social-media-app-mso.web.app/"
                         codeURL="https://github.com/markohanesian/ReactSocial"
                       />
-                       <DevItem
-                        cardImage="item-images/the-pomegranate-boutique.png"
-                        cardTitle="The Pomegranate Boutique"
-                        cardDescription="E-Commerce website using Shopify and custom liquid code"
-                        deployURL="https://www.thepomegranateboutique.com/"
-                      />
                       <DevItem
                         cardImage="item-images/git-good.png"
                         cardTitle="Git Good"
@@ -165,13 +156,11 @@ function App() {
                         deployURL="https://git-cheatsheet-mso.netlify.app/"
                         codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
                       />
-
                       <DevItem
-                        cardImage="item-images/tetris-mso.png"
-                        cardTitle="tetris-mso"
-                        cardDescription="Inspired by the original Tetris game, playable with your keyboard, built with vanilla javascript"
-                        deployURL="https://markohanesian.github.io/tetris-mso/"
-                        codeURL="https://github.com/markohanesian/tetris-mso"
+                        cardImage="item-images/the-pomegranate-boutique.png"
+                        cardTitle="The Pomegranate Boutique"
+                        cardDescription="E-Commerce website using Shopify and custom liquid code"
+                        deployURL="https://www.thepomegranateboutique.com/"
                       />
                     </Grid>
                   </Grid>
