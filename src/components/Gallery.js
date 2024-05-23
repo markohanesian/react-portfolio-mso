@@ -1,9 +1,9 @@
 import React from "react";
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+import { makeStyles, createStyles, Theme } from "@mui/core/styles";
+import Paper from "@mui/core/Paper";
+import Grid from "@mui/core/Grid";
+import Typography from "@mui/core/Typography";
+import Button from "@mui/core/Button";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

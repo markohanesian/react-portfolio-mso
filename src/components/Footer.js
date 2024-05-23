@@ -1,11 +1,11 @@
 import React from 'react';
-import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography, CssBaseline, Toolbar } from '@material-ui/core/';
-import IconButton from '@material-ui/core/IconButton';
+import { createStyles, Theme, makeStyles } from '@mui/core/styles';
+import { Grid, Typography, CssBaseline, Toolbar } from '@mui/core/';
+import IconButton from '@mui/core/IconButton';
 // social link icons
-import GitHubIcon from '@material-ui/icons/GitHub';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@mui/icons/GitHub';
+import MailOutlineIcon from '@mui/icons/MailOutline';
+import LinkedInIcon from '@mui/icons/LinkedIn';
 // date subcomponent
 import CurrentYear from './CurrentYear';
 

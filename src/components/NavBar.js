@@ -1,10 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import CodeIcon from '@material-ui/icons/Code';
-import BrushIcon from '@material-ui/icons/Brush';
-import CameraAlt from '@material-ui/icons/CameraAlt';
+import { makeStyles } from '@mui/core/styles';
+import BottomNavigation from '@mui/core/BottomNavigation';
+import BottomNavigationAction from '@mui/core/BottomNavigationAction';
+import CodeIcon from '@mui/icons/Code';
+import BrushIcon from '@mui/icons/Brush';
+import CameraAlt from '@mui/icons/CameraAlt';
 import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({

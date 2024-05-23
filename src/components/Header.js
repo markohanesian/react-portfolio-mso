@@ -1,7 +1,7 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Button from '@material-ui/core/Button';
+import { makeStyles } from "@mui/core/styles";
+import Typography from "@mui/core/Typography";
+import Button from '@mui/core/Button';
 
 const useStyles = makeStyles({
   image: {

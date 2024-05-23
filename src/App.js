@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Grid, Paper } from "@material-ui/core";
+import { Grid, Paper } from "@mui/core";
 import DarkModeToggle from "react-dark-mode-toggle";
 import {
   ThemeProvider,
   createMuiTheme,
   makeStyles,
-} from "@material-ui/core/styles";
+} from "@mui/core/styles";
 import "./App.css";
 // components
 import NavBar from "./components/NavBar";
