@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Grid, Paper } from "@mui/material";
+import { Grid, Paper, Stack } from "@mui/material";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { ThemeProvider, createTheme } from '@mui/material/styles'; // Correct import
 import { makeStyles, createStyles } from '@mui/styles'; // Correct import
@@ -102,8 +102,8 @@ function App() {
                 />
                 {/* Design Section */}
                 <Route path="/design">
-                  <Grid className={classes.gridContainer} container>
-                    <Grid className={classes.DevContainer}>
+                  <Stack className={classes.gridContainer} container>
+                    <Stack className={classes.DevContainer}>
                       <NavBar />
                       <DesignItem
                         cardImage="item-images/styledPP.png"
@@ -131,13 +131,13 @@ function App() {
                         cardDescription="Mobile-friendly signup form conceptdesigned in Adobe xD"
                         dribbleURL="https://dribbble.com/shots/13495221-Signup-Form-Concept-Project-Golden-Phoenix?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Signup%20Form%20Concept%20-%20Project%20Golden%20Phoenix&utm_medium=Social_Share"
                       />
-                    </Grid>
-                  </Grid>
+                    </Stack>
+                  </Stack>
                 </Route>
                 {/* Development Section */}
                 <Route path="/">
                   <Grid className={classes.gridContainer} container>
-                    <Grid className={classes.DevContainer}>
+                    <Stack className={classes.DevContainer}>
                       <NavBar />
                       <DevItem
                         cardImage="item-images/react-social-preview.png"
@@ -159,7 +159,7 @@ function App() {
                         cardDescription="E-Commerce website using Shopify and custom liquid code"
                         deployURL="https://www.thepomegranateboutique.com/"
                       />
-                    </Grid>
+                    </Stack>
                   </Grid>
                 </Route>
               </Switch>
