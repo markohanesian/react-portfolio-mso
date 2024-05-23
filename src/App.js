@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Grid, Paper } from "@mui/material";
 import DarkModeToggle from "react-dark-mode-toggle";
-import { ThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles'; // Correct import
+import { makeStyles, createStyles } from '@mui/styles'; // Correct import
 import "./App.css";
 // components
 import NavBar from "./components/NavBar";
@@ -15,7 +16,7 @@ import DesignItem from "./components/DesignItem";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const theme = createMuiTheme({
+  const theme = createTheme({
     palette: {
       type: darkMode ? "dark" : "light",
     },
