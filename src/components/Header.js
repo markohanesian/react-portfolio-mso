@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     borderRadius: "50%",
     display: 'flex',
     alignSelf: 'center',
+    marginBottom: "1rem"
   },
   heading: {
     fontSize: "2.5rem",
@@ -29,8 +30,10 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: "center",
+    alignSelf: "center",
     textAlign: 'center',
-    margin: "2rem"
+    margin: "2rem",
+    maxWidth: "300px"
   }
 });
 
@@ -43,8 +46,8 @@ export default function Header() {
       <Typography
         className={classes.heading}
         gutterBottom
-        variant="h1"
-        component="h2"
+        variant="h4"
+        component="h1"
       >
         Hello, I'm Mark
       </Typography>
