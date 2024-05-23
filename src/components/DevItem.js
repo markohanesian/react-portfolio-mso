@@ -1,10 +1,10 @@
 import React from "react";
-import { Theme, createStyles, makeStyles } from "@mui/core/styles";
-import Card from "@mui/core/Card";
-import CardContent from "@mui/core/CardContent";
-import CardMedia from "@mui/core/CardMedia";
-import Button from "@mui/core/Button";
-import Typography from "@mui/core/Typography";
+import { Theme, createStyles, makeStyles } from "@mui/material/styles";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
