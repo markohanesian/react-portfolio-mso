@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Grid, Paper, Stack } from "@mui/material";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { ThemeProvider, createTheme } from '@mui/material/styles'; // Correct import
-import { makeStyles, createStyles } from '@mui/styles'; // Correct import
+import { makeStyles } from '@mui/styles'; // Correct import
 import "./App.css";
 // components
 import NavBar from "./components/NavBar";
