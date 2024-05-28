@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, createTheme, makeStyles, createStyles } from '@mui/styles';
+import { makeStyles, createStyles } from '@mui/styles';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
