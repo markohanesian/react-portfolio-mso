@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Grid, Paper, Stack } from "@mui/material";
 import DarkModeToggle from "react-dark-mode-toggle";
-import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider, makeStyles, createTheme } from '@material-ui/core/styles';
 import "./App.css";
 // components
 import NavBar from "./components/NavBar";
