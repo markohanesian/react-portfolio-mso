@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider, createMuiTheme, makeStyles } from '@mui/styles';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Grid, Paper, Stack } from "@mui/material";
 import DarkModeToggle from "react-dark-mode-toggle";
