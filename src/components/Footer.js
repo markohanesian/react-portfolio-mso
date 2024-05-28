@@ -12,7 +12,7 @@ import CurrentYear from './CurrentYear';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     text: {
-      padding: theme.spacing(2, 2, 0),
+      padding: "2rem",
     },
     footer: {
       top: 'auto',
