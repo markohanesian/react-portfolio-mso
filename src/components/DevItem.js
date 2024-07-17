@@ -23,12 +23,11 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: "0.5rem",
       maxWidth: "200px",
     },
-    imageContainer: {
-      display: "flex",
-      width: "auto",
-    },
+  
     image: {
-      width: 120,
+      marginTop: "1rem",
+      minWidth: "160px",
+      height: "100%",
       marginRight: "1rem",
     },
     title: {
