@@ -55,7 +55,8 @@ export default function Header() {
         variant="body1"
         component="p"
       >
-        I'm a full stack web developer and ui/ux designer, and I made this website with ReactJS and MaterialUI - see the source code <Button color="secondary" href="https://github.com/markohanesian/react-portfolio-mso" target="blank">Here</Button>
+        I'm a full stack web developer and ui/ux designer, and I made this website with ReactJS and MaterialUI
+        {/* <Button color="secondary" href="https://github.com/markohanesian/react-portfolio-mso" target="blank">Here</Button> */}
       </Typography>
     </div>
   );
