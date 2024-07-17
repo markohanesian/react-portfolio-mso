@@ -58,8 +58,8 @@ export default function MediaControlCard(props) {
         <CardMedia
           className={classes.image}
           image={props.cardImage}
-          title="Git Good website image"
-        />
+          title={`thumbnail of${props.cardTitle}`}
+          />
       </div>
       <div className={classes.details}>
         <CardContent className={classes.content}>
