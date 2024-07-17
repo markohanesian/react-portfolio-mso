@@ -17,7 +17,11 @@ I need a website for showcasing my development, design, and photography
 * Material-Ui
 
 ## Planned Features/Outstanding Issues
-* Navigation tab highlighting to show user current page being browsed
+✅ = fixed
+🚧 = in progress
+
+* Tech icons for dev projects 🚧
+* Navigation tab highlighting to show user current page being browsed ✅
 
 ## Authors
 * [Mark Ohanesian](https://github.com/markohanesian) 
