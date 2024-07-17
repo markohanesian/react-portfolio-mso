@@ -1,15 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const CurrentYearStyle = {
-    fontSize: '1rem'
-}
+  fontSize: "1rem",
+};
 
 export default function CurrentYear() {
+  const today = new Date();
+  var year = today.getFullYear();
 
-    const today = new Date();
-    var year = today.getFullYear();
-
-    return (
-            <p style={CurrentYearStyle}>{year} Mark Ohanesian</p>
-    )
-};
+  return <span style={CurrentYearStyle}>{year} Mark Ohanesian</span>;
+}
