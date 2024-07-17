@@ -4,7 +4,7 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import CodeIcon from '@mui/icons-material/Code';
 import BrushIcon from '@mui/icons-material/Brush';
-import CameraAlt from '@mui/icons-material/CameraAlt';
+// import CameraAlt from '@mui/icons-material/CameraAlt';
 import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
@@ -38,7 +38,7 @@ export default function SimpleBottomNavigation() {
     >
       <BottomNavigationAction className={classes.NavButtons} value="home"  label="Development" icon={<CodeIcon />} />
       <BottomNavigationAction className={classes.NavButtons} value="design"  label="Design" icon={<BrushIcon />} />
-      <BottomNavigationAction className={classes.NavButtons} value="photography" label="Photography" icon={<CameraAlt />} />
+      {/* <BottomNavigationAction className={classes.NavButtons} value="photography" label="Photography" icon={<CameraAlt />} /> */}
     </BottomNavigation>
   );
 }
