@@ -13,6 +13,7 @@ const useStyles = makeStyles({
     flexDirection: 'row',
     flexWrap: 'nowrap',
     justifyContent: 'space-between',
+    marginBottom: "1rem"
   },
   NavButtons: {
     margin: '.5rem'
