@@ -10,11 +10,12 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
       display: "flex",
-      flexDirection: "row",
+      flexDirection: "column",
       // alignSelf: 'flex-start',
       margin: "1rem",
       padding: "1rem",
-      maxWidth: "400px",
+      minWidth: "200px",
+      minHeight: "400px"
     },
     content: {
       display: "flex",
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
     image: {
       marginTop: "1rem",
       minWidth: "160px",
-      height: "100%",
+      minHeight: "180px",
       marginRight: "1rem",
     },
     title: {
@@ -52,7 +53,7 @@ export default function MediaControlCard(props) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.container}>
+    <Card elevation={2} className={classes.container}>
       <div className={classes.imageContainer}>
         <CardMedia
           className={classes.image}
