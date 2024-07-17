@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Grid, Paper, Stack } from "@mui/material";
+import { Grid, Paper } from "@mui/material";
 import DarkModeToggle from "react-dark-mode-toggle";
 import "./App.css";
 // components
@@ -19,7 +19,6 @@ const useStyles = makeStyles({
     flexGrow: 1,
   },
   app: {
-    // height: "100vh",
     display: "flex",
     flexDirection: "column",
     padding: "1rem",
@@ -52,21 +51,8 @@ const useStyles = makeStyles({
     flexDirection: "column",
     justifyContent: "center",
   },
-  gridColumn: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
+  gridItem: {
     padding: "1rem",
-  },
-  DevContainer: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-  SectionIcon: {
-    margin: "2rem 0 0 0",
-    fontSize: "3rem",
   },
 });
 
@@ -92,6 +78,7 @@ function App() {
         </Grid>
         <Header />
         <Router>
+        <NavBar />
           <div>
             <Switch>
               <Route
@@ -103,43 +90,45 @@ function App() {
               />
               {/* Design Section */}
               <Route path="/design">
-                <Stack className={classes.gridContainer} container>
-                  <Stack className={classes.DevContainer}>
-                    <NavBar />
+                <Grid container spacing={2} className={classes.gridContainer}>
+                  <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
                     <DesignItem
                       cardImage="item-images/styledPP.png"
                       cardTitle="Web App Dashboard Concept"
                       cardDescription="Wardrobe app concept user Dashboard designed in Adobe xD with original photography"
                       dribbleURL="https://dribbble.com/shots/13904483-Profile-Page-styld-app-concept"
                     />
+                  </Grid>
+                  <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
                     <DesignItem
                       cardImage="item-images/tulips-concept.png"
                       cardTitle="Shoe Product Page Concept"
                       cardDescription="Product landing page concept made in Adobe XD | featuring my product photography"
                       dribbleURL="https://dribbble.com/shots/14062665-Tulips-homepage-concept"
                     />
-
+                  </Grid>
+                  <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
                     <DesignItem
                       cardImage="item-images/hisherswatches.jpg"
                       cardTitle="Apple Watch Faces Concept"
                       cardDescription="Apple Watch faces concept designed in Adobe xD and Photoshop"
                       dribbleURL="https://dribbble.com/shots/13774573-Apple-Watch-Face-Concept-Rose-Gold-His-Hers?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Apple%20Watch%20Face%20Concept%20-%20Rose%20Gold%20His%20%2B%20Hers&utm_medium=Social_Share"
                     />
-
+                  </Grid>
+                  <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
                     <DesignItem
                       cardImage="item-images/signup-pgp.png"
                       cardTitle="App Signup Page Concept"
                       cardDescription="Mobile-friendly signup form conceptdesigned in Adobe xD"
                       dribbleURL="https://dribbble.com/shots/13495221-Signup-Form-Concept-Project-Golden-Phoenix?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Signup%20Form%20Concept%20-%20Project%20Golden%20Phoenix&utm_medium=Social_Share"
                     />
-                  </Stack>
-                </Stack>
+                  </Grid>
+                </Grid>
               </Route>
               {/* Development Section */}
               <Route path="/">
-                <Grid className={classes.gridContainer} container>
-                  <Stack className={classes.DevContainer}>
-                    <NavBar />
+                <Grid container spacing={2} className={classes.gridContainer}>
+                  <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
                     <DevItem
                       cardImage="item-images/react-social-preview.png"
                       cardTitle="ReactSocial"
@@ -147,6 +136,8 @@ function App() {
                       deployURL="https://social-media-app-mso.web.app/"
                       codeURL="https://github.com/markohanesian/ReactSocial"
                     />
+                  </Grid>
+                  <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
                     <DevItem
                       cardImage="item-images/git-good.png"
                       cardTitle="Git Good"
@@ -154,14 +145,17 @@ function App() {
                       deployURL="https://git-cheatsheet-mso.netlify.app/"
                       codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
                     />
-                    {/* <DevItem
+                  </Grid>
+                  {/* Uncomment the below block if you want to add this DevItem */}
+                  {/* <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
+                    <DevItem
                       cardImage="item-images/former-mso.png"
                       cardTitle="Former"
                       cardDescription="Form creator website with export to pdf"
                       deployURL="https://former-mso.netlify.app/"
                       codeURL="https://github.com/markohanesian/former-mso"
-                    /> */}
-                  </Stack>
+                    />
+                  </Grid> */}
                 </Grid>
               </Route>
             </Switch>
