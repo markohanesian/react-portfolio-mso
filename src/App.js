@@ -141,11 +141,11 @@ function App() {
                       <DevItem
                         cardImage="item-images/react-social-preview.png"
                         cardTitle="ReactSocial"
-                        cardDescription="Social media web app built with React and Firebase"
+                        cardDescription="A social media app featuring the ability to post text and images, and comment on user posts. Built with reactjs, firebase, and materialui"
                         deployURL="https://social-media-app-mso.web.app/"
                         codeURL="https://github.com/markohanesian/ReactSocial"
                       />
-                       <DevItem
+                      <DevItem
                         cardImage="item-images/git-good.png"
                         cardTitle="Git Good"
                         cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
