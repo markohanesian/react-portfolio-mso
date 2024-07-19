@@ -146,8 +146,7 @@ function App() {
                       codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
                     />
                   </Grid>
-                  {/* Uncomment the below block if you want to add this DevItem */}
-                  {/* <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
+                  <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
                     <DevItem
                       cardImage="item-images/former-mso.png"
                       cardTitle="Former"
@@ -155,7 +154,7 @@ function App() {
                       deployURL="https://former-mso.netlify.app/"
                       codeURL="https://github.com/markohanesian/former-mso"
                     />
-                  </Grid> */}
+                  </Grid>
                 </Grid>
               </Route>
             </Switch>
