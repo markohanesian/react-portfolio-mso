@@ -10,8 +10,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 // Development items
 import DevItem from "./components/DevItem";
-// Design Items
-import DesignItem from "./components/DesignItem";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
@@ -58,11 +56,15 @@ const useStyles = makeStyles({
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const theme = useMemo(() => createTheme({
-    palette: {
-      mode: darkMode ? "dark" : "light",
-    },
-  }), [darkMode]);
+  const theme = useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: darkMode ? "dark" : "light",
+        },
+      }),
+    [darkMode]
+  );
 
   const classes = useStyles();
 
@@ -78,7 +80,7 @@ function App() {
         </Grid>
         <Header />
         <Router>
-        <NavBar />
+          <NavBar />
           <div>
             <Switch>
               <Route
@@ -90,9 +92,10 @@ function App() {
               />
               {/* Design Section */}
               <Route path="/design">
-                <Grid container spacing={2} className={classes.gridContainer}>
+                <Grid container spacing={2} className={classes.gridContainer}                   sx={{ maxWidth: "800px", margin: "0 auto" }}
+                >
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-                    <DesignItem
+                    <DevItem
                       cardImage="item-images/styledPP.png"
                       cardTitle="Web App Dashboard Concept"
                       cardDescription="Wardrobe app concept user Dashboard designed in Adobe xD with original photography"
@@ -100,7 +103,7 @@ function App() {
                     />
                   </Grid>
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-                    <DesignItem
+                    <DevItem
                       cardImage="item-images/tulips-concept.png"
                       cardTitle="Shoe Product Page Concept"
                       cardDescription="Product landing page concept made in Adobe XD | featuring my product photography"
@@ -108,7 +111,7 @@ function App() {
                     />
                   </Grid>
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-                    <DesignItem
+                    <DevItem
                       cardImage="item-images/hisherswatches.jpg"
                       cardTitle="Apple Watch Faces Concept"
                       cardDescription="Apple Watch faces concept designed in Adobe xD and Photoshop"
@@ -116,7 +119,7 @@ function App() {
                     />
                   </Grid>
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-                    <DesignItem
+                    <DevItem
                       cardImage="item-images/signup-pgp.png"
                       cardTitle="App Signup Page Concept"
                       cardDescription="Mobile-friendly signup form conceptdesigned in Adobe xD"
@@ -127,7 +130,12 @@ function App() {
               </Route>
               {/* Development Section */}
               <Route path="/">
-                <Grid container spacing={2} className={classes.gridContainer}>
+                <Grid
+                  container
+                  spacing={2}
+                  className={classes.gridContainer}
+                  sx={{ maxWidth: "800px", margin: "0 auto" }}
+                >
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
                     <DevItem
                       cardImage="item-images/react-social-preview.png"
