@@ -35,13 +35,6 @@ const useStyles = makeStyles({
     fontWeight: "300",
     paddingBottom: "0",
   },
-  subtitle: {
-    fontSize: "0.8rem",
-    fontWeight: "400",
-  },
-  bottomNav: {
-    backgroundColor: "green",
-  },
   gridContainer: {
     flexGrow: 1,
     marginTop: "1rem",
