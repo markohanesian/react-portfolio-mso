@@ -140,20 +140,20 @@ function App() {
                   </Grid>
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
                     <PortfolioItem
-                      cardImage="item-images/git-good.png"
-                      cardTitle="Git Good"
-                      cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
-                      deployURL="https://git-cheatsheet-mso.netlify.app/"
-                      codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-                    <PortfolioItem
                       cardImage="item-images/former-mso.png"
                       cardTitle="Former"
                       cardDescription="Form creator website with export to pdf"
                       deployURL="https://former-mso.netlify.app/"
                       codeURL="https://github.com/markohanesian/former-mso"
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
+                    <PortfolioItem
+                      cardImage="item-images/git-good.png"
+                      cardTitle="Git Good"
+                      cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
+                      deployURL="https://git-cheatsheet-mso.netlify.app/"
+                      codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
                     />
                   </Grid>
                 </Grid>
