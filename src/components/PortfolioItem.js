@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function MediaControlCard(props) {
+export default function PortfolioItem(props) {
   const classes = useStyles();
 
   return (

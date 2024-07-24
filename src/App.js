@@ -9,7 +9,7 @@ import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 // Development items
-import DevItem from "./components/DevItem";
+import PortfolioItem from "./components/PortfolioItem";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
@@ -88,7 +88,7 @@ function App() {
                 <Grid container spacing={2} className={classes.gridContainer}                   sx={{ maxWidth: "800px", margin: "0 auto" }}
                 >
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-                    <DevItem
+                    <PortfolioItem
                       cardImage="item-images/styledPP.png"
                       cardTitle="Web App Dashboard Concept"
                       cardDescription="Wardrobe app concept user Dashboard designed in Adobe xD with original photography"
@@ -96,7 +96,7 @@ function App() {
                     />
                   </Grid>
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-                    <DevItem
+                    <PortfolioItem
                       cardImage="item-images/tulips-concept.png"
                       cardTitle="Shoe Product Page Concept"
                       cardDescription="Product landing page concept made in Adobe XD | featuring my product photography"
@@ -104,7 +104,7 @@ function App() {
                     />
                   </Grid>
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-                    <DevItem
+                    <PortfolioItem
                       cardImage="item-images/hisherswatches.jpg"
                       cardTitle="Apple Watch Faces Concept"
                       cardDescription="Apple Watch faces concept designed in Adobe xD and Photoshop"
@@ -112,7 +112,7 @@ function App() {
                     />
                   </Grid>
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-                    <DevItem
+                    <PortfolioItem
                       cardImage="item-images/signup-pgp.png"
                       cardTitle="App Signup Page Concept"
                       cardDescription="Mobile-friendly signup form conceptdesigned in Adobe xD"
@@ -130,7 +130,7 @@ function App() {
                   sx={{ maxWidth: "800px", margin: "0 auto" }}
                 >
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-                    <DevItem
+                    <PortfolioItem
                       cardImage="item-images/react-social-preview.png"
                       cardTitle="ReactSocial"
                       cardDescription="A social media app featuring the ability to post text and images, and comment on user posts. Built with reactjs, firebase, and materialui"
@@ -139,7 +139,7 @@ function App() {
                     />
                   </Grid>
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-                    <DevItem
+                    <PortfolioItem
                       cardImage="item-images/git-good.png"
                       cardTitle="Git Good"
                       cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
@@ -148,7 +148,7 @@ function App() {
                     />
                   </Grid>
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-                    <DevItem
+                    <PortfolioItem
                       cardImage="item-images/former-mso.png"
                       cardTitle="Former"
                       cardDescription="Form creator website with export to pdf"
