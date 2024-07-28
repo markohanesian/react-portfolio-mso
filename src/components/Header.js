@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import Typography from "@mui/material/Typography";
+import { Typography, Link} from "@mui/material";
 // import Button from '@mui/material/Button';
 
 const useStyles = makeStyles({
@@ -58,6 +58,21 @@ export default function Header() {
         I'm a full stack web developer and ui/ux designer, and I made this website with ReactJS and MaterialUI
         {/* <Button color="secondary" href="https://github.com/markohanesian/react-portfolio-mso" target="blank">Here</Button> */}
       </Typography>
-    </div>
+      <br></br>
+      <Link
+        href="https://docs.google.com/document/d/13YCjJR0GZG3vrNRGLlTZpAYYAn5Oj5OahaxFcmQakMQ/edit?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View Mark's resume"
+      >
+        Resume
+      </Link>  <Link
+        href="https://www.linkedin.com/in/mark-ohanesian/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View Mark's LinkedIn"
+      >
+        LinkedIn
+      </Link>  </div>
   );
 }
