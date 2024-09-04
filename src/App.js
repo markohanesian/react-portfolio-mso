@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Grid, Paper } from "@mui/material";
 import DarkModeToggle from "react-dark-mode-toggle";
 import "./App.css";
+// pages
+import ReactSocialCaseStudy from "./pages/ReactSocialCaseStudy";
 // components
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
@@ -89,6 +91,14 @@ function App() {
                 >
                   <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
                     <PortfolioItem
+                      cardImage="item-images/react-social-preview.png"
+                      cardTitle="Case Study: ReactSocial"
+                      cardDescription="A social media app featuring the ability to post text and images, and comment on user posts. Built with reactjs, firebase, and materialui"
+                      caseStudyURL="/react-social-case-study"
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
+                    <PortfolioItem
                       cardImage="item-images/styledPP.png"
                       cardTitle="Web App Dashboard Concept"
                       cardDescription="Wardrobe app concept user Dashboard designed in Adobe xD with original photography"
@@ -121,6 +131,7 @@ function App() {
                   </Grid>
                 </Grid>
               </Route>
+              <Route path="/react-social-case-study" component={ReactSocialCaseStudy} /> {/* Add new route */}
               {/* Development Section */}
               <Route path="/">
                 <Grid

@@ -82,6 +82,11 @@ export default function PortfolioItem(props) {
               Code
             </Button>
           )}
+          {props.caseStudyURL && (
+            <Button color="secondary" href={props.caseStudyURL} target="blank">
+              View case study
+            </Button>
+          )}
         </div>
       </div>
     </Card>
