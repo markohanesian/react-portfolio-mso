@@ -3,7 +3,7 @@ import { Box, Typography, Container, Divider } from "@mui/material";
 import CTALink from "../components/CTALink";
 const ReactSocialCaseStudy = () => {
   return (
-    <Container maxWidth="md" sx={{ mt: 4, mb: 4, textAlign: "center" }}>
+    <Container maxWidth="md" sx={{ mt: 4, mb: 4, textAlign: "flex-start" }}>
       <Box
         sx={{
           textAlign: "center",
@@ -87,8 +87,9 @@ const ReactSocialCaseStudy = () => {
         </Typography>
         <Typography variant="body1" paragraph>
           <strong>Ideation:</strong> Focused on creating an easy-to-use and
-          visually appealing platform. The interface prioritized user engagement
-          with a simple and intuitive layout.
+          visually appealing platform reminiscent of older DOS computers that
+          had black screen with green terminal text. The interface prioritized
+          having a clear call to action to get new users to sign in with a simple Google authentication flow and post to the social feed.
         </Typography>
         <Typography variant="body1" paragraph>
           <strong>Wireframes:</strong> Early wireframes outlined key features
