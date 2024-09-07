@@ -10,6 +10,7 @@ import Design from "./pages/Design";
 import PortfolioItem from "./components/PortfolioItem";
 import NavBar from "./components/NavBar"; // Import the NavBar component
 import { makeStyles } from "@mui/styles";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 const useStyles = makeStyles({
   root: {
@@ -50,7 +51,11 @@ function App() {
       <Paper className={classes.app}>
         <Router>
           {/* Render the NavBar component */}
-          <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <NavBar darkMode={darkMode} setDarkMode={setDarkMode}><DarkModeToggle
+            size={60}
+            checked={darkMode}
+            onChange={() => setDarkMode(!darkMode)}
+          /></NavBar>
           <div>
             <Routes>
               {" "}
