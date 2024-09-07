@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ReactSocialCaseStudy from "./pages/Development";
 import Development from "./pages/Development";
+import Design from "./pages/Design";
 import PortfolioItem from "./components/PortfolioItem";
 import NavBar from "./components/NavBar"; // Import the NavBar component
 import { makeStyles } from "@mui/styles";
@@ -17,7 +18,6 @@ const useStyles = makeStyles({
   app: {
     display: "flex",
     flexDirection: "column",
-    padding: "1rem",
   },
   gridContainer: {
     flexGrow: 1,
@@ -65,14 +65,7 @@ function App() {
               <Route
                 path="/design"
                 element={
-                  <Grid
-                    container
-                    spacing={2}
-                    className={classes.gridContainer}
-                    sx={{ maxWidth: "800px", margin: "0 auto" }}
-                  >
-                    {/* Portfolio items */}
-                  </Grid>
+                  <Design />
                 }
               />
               <Route
