@@ -36,13 +36,14 @@ const useStyles = makeStyles({
   },
   linkContainer: {
     display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-between",
     width: "100%", // Make sure the container takes full width
     marginTop: "2rem", // Add some space between the text and the links
   },
   link: {
-    margin: "0 0.5rem", // Add horizontal margin to space out the links
+    padding: "1rem", 
   },
 });
 
