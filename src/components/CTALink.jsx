@@ -13,8 +13,8 @@ const CTALink = styled(Link)(({ theme }) => ({
   alignItems: 'center',
   gridColumnGap: '.5rem',
   gridRowGap: '.5rem',
-  padding: '1rem 5rem',
-  fontSize: '22px',
+  padding: '1rem 4rem',
+  fontSize: '18px',
   backgroundColor: theme.palette.mode === 'dark' ? '#333' : 'black',  // Adjusts based on theme mode
   color: theme.palette.mode === 'dark' ? 'var(--white)' : 'white',
   textAlign: 'center',
