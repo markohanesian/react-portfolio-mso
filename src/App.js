@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Up
 import { Grid, Paper } from "@mui/material";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ReactSocialCaseStudy from "./pages/ReactSocialCaseStudy";
+import ReactSocialCaseStudy from "./pages/Development";
+import Development from "./pages/Development";
 import PortfolioItem from "./components/PortfolioItem";
 import NavBar from "./components/NavBar"; // Import the NavBar component
 import { makeStyles } from "@mui/styles";
@@ -77,6 +78,10 @@ function App() {
               <Route
                 path="/react-social-case-study"
                 element={<ReactSocialCaseStudy />}
+              />
+              <Route
+                path="/development"
+                element={<Development />}
               />
               <Route
                 path="/"
