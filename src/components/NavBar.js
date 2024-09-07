@@ -22,7 +22,7 @@ const dropdownPages = [
 ];
 const settings = ['Design', 'Development'];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate(); // Use navigate for navigation
@@ -111,6 +111,9 @@ function ResponsiveAppBar() {
                 {page.name}
               </Button>
             ))}
+          </Box>
+          <Box sx={{ justifyContent: "flex-end", flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {props.children}
           </Box>
         </Toolbar>
       </Container>
