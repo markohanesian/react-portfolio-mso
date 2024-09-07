@@ -34,7 +34,7 @@ const ReactSocialCaseStudy = () => {
             maxWidth: { xs: 350, md: 700 },
           }}
           alt="ReactSocial homepage screenshot"
-          src="item-images/react-social-preview.png"
+          src="case-study-images/home.png"
         />
         <br></br>
         <CTALink href="https://social-media-app-mso.web.app/" target="_blank">
