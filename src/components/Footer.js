@@ -36,7 +36,7 @@ export default function Footer() {
     <React.Fragment>
       <CssBaseline />
       <Grid position="relative" color="primary" className={classes.footer}>
-        <Toolbar>
+        <Toolbar sx={{}}>
           <div>
             <Typography variant="body1" color="black" noWrap>
                 <CurrentYear />

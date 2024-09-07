@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import ReactSocialCaseStudy from "./pages/Development";
 import Development from "./pages/Development";
 import Design from "./pages/Design";
-import PortfolioItem from "./components/PortfolioItem";
 import NavBar from "./components/NavBar"; // Import the NavBar component
 import { makeStyles } from "@mui/styles";
 import DarkModeToggle from "react-dark-mode-toggle";
