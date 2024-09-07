@@ -1,39 +1,121 @@
-import React, { useEffect } from 'react';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import CodeIcon from '@mui/icons-material/Code';
-import BrushIcon from '@mui/icons-material/Brush';
-// import CameraAlt from '@mui/icons-material/CameraAlt';
-import { useHistory, useLocation } from 'react-router-dom';
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
+import HomeIcon from '@mui/icons-material/Home';
+import { useNavigate } from 'react-router-dom';
 
-export default function SimpleBottomNavigation() {
-  const [value, setValue] = React.useState('home');
-  const history = useHistory();
-  const location = useLocation();
+const dropdownPages = [
+  { name: 'Design', route: '/design' },
+  { name: 'Development', route: '/development' },
+  { name: 'Photography', route: '/photography' },
+  { name: 'Case Study', route: '/react-social-case-study' }
+];
+const settings = ['Design', 'Development'];
 
-  useEffect(() => {
-    if (location.pathname === '/design') {
-      setValue('design');
-    } else {
-      setValue('home');
+function ResponsiveAppBar() {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate(); // Use navigate for navigation
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = (route) => {
+    setAnchorElNav(null);
+    if (route) {
+      navigate(route); // Navigate to the selected route
     }
-  }, [location.pathname]);
+  };
 
-  const handleChange = (event, newValue) => {
-    history.push(`/${newValue}`);
-    setValue(newValue);
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
   };
 
   return (
-    <BottomNavigation
-      value={value}
-      onChange={handleChange}
-      showLabels
-      sx={{background: 'none'}}
-    >
-      <BottomNavigationAction value="home" label="Development" icon={<CodeIcon />} />
-      <BottomNavigationAction value="design" label="Design" icon={<BrushIcon />} />
-      {/* <BottomNavigationAction className={classes.NavButtons} value="photography" label="Photography" icon={<CameraAlt />} /> */}
-    </BottomNavigation>
+    <AppBar position="static">
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          {/* Home icon on the left */}
+          <IconButton
+            size="large"
+            aria-label="home"
+            onClick={() => navigate('/')}
+            color="inherit"
+            sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }}
+          >
+            <HomeIcon />
+          </IconButton>
+
+
+
+          {/* Right side avatar and menu */}
+                    {/* Menu button on mobile */}
+                    <Box sx={{ justifyContent: "flex-end", flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="menu"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={() => handleCloseNavMenu(null)}
+              sx={{ display: { xs: 'block', md: 'none' } }}
+            >
+              {dropdownPages.map((page) => (
+                <MenuItem key={page.name} onClick={() => handleCloseNavMenu(page.route)}>
+                  <Typography sx={{ textAlign: 'center' }}>{page.name}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+
+          {/* Menu button on larger screens */}
+          <Box sx={{ justifyContent: "flex-end", flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {dropdownPages.filter(page => settings.includes(page.name)).map((page) => (
+              <Button
+                key={page.name}
+                onClick={() => handleCloseNavMenu(page.route)}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                {page.name}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }
+
+export default ResponsiveAppBar;
