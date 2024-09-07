@@ -28,10 +28,10 @@ const ReactSocialCaseStudy = () => {
           component="img"
           sx={{
             margin: "1rem",
-            height: "200px",
+            height: "500px",
             width: "auto",
-            // maxHeight: { xs: 233, md: 167 },
-            // maxWidth: { xs: 350, md: 250 },
+            maxHeight: { xs: 233, md: 466 },
+            maxWidth: { xs: 350, md: 700 },
           }}
           alt="ReactSocial homepage screenshot"
           src="item-images/react-social-preview.png"
