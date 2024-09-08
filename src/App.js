@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Up
 import { Grid, Paper } from "@mui/material";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ReactSocialCaseStudy from "./pages/Development";
+import ReactSocialCaseStudy from "./pages/ReactSocialCaseStudy";
 import Development from "./pages/Development";
 import Design from "./pages/Design";
 import NavBar from "./components/NavBar"; // Import the NavBar component
