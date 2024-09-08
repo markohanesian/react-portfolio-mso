@@ -11,6 +11,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import HomeIcon from "@mui/icons-material/Home";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from '@mui/material/styles';
 
 const dropdownPages = [
   { name: "Development", route: "/development" },
@@ -19,6 +20,7 @@ const dropdownPages = [
 const settings = ["Design", "Development"];
 
 function ResponsiveAppBar(props) {
+  const theme = useTheme(); 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const navigate = useNavigate(); // Use navigate for navigation
 
@@ -34,7 +36,7 @@ function ResponsiveAppBar(props) {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{backgroundColor: theme.palette.mode === 'dark' ? '#333' : '#002984'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Home icon on the left */}
