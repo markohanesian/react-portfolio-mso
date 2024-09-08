@@ -5,7 +5,7 @@ import Header from "../components/Header-V2";
 
 const ReactSocialCaseStudy = () => {
   return (
-    <Container maxWidth="md" sx={{ mt: 4, mb: 4, textAlign: "flex-start"}}>
+    <Container maxWidth="md" sx={{ mt: 4, mb: 4, textAlign: "flex-start" }}>
       <Box
         sx={{
           textAlign: "center",
@@ -19,7 +19,22 @@ const ReactSocialCaseStudy = () => {
         <Typography variant="h4" component="h2" gutterBottom>
           Apartment Woodworking Starter Kit
         </Typography>
-        <ProductLink url="https://amzn.to/3zbXxx6">Hand Saw</ProductLink>
+        <ProductLink url="https://amzn.to/3zbXxx6">Saw</ProductLink>
+        <ProductLink url="https://amzn.to/47hBBNE">Plane</ProductLink>
+        <ProductLink url="https://amzn.to/3ZnFrCO">Hammer</ProductLink>
+        <ProductLink url="https://amzn.to/4cWXaUP">Chisels</ProductLink>
+        <ProductLink url="https://amzn.to/4dUe6wK">
+          Sharpening Stone
+        </ProductLink>
+        <ProductLink url="https://amzn.to/47hHieC">
+          Combination Square
+        </ProductLink>
+        <ProductLink url="https://amzn.to/3MFlOPj">Clamps</ProductLink>
+        <ProductLink url="https://amzn.to/3XgOHGk">Sandpaper</ProductLink>
+        <ProductLink url="https://amzn.to/3XzlE20">Sanding Block</ProductLink>
+        <ProductLink url="https://amzn.to/3XwxaLD">
+          Shellac (sealer)
+        </ProductLink>
       </Box>
     </Container>
   );
