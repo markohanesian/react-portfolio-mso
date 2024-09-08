@@ -51,7 +51,7 @@ function App() {
         <Router>
           {/* Render the NavBar component */}
           <NavBar darkMode={darkMode} setDarkMode={setDarkMode}><DarkModeToggle
-            size={60}
+            size={40}
             checked={darkMode}
             onChange={() => setDarkMode(!darkMode)}
           /></NavBar>
