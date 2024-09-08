@@ -13,10 +13,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import { useNavigate } from "react-router-dom";
 
 const dropdownPages = [
-  { name: "Design", route: "/design" },
   { name: "Development", route: "/development" },
-  { name: "Photography", route: "/photography" },
-  { name: "Case Study", route: "/react-social-case-study" },
+  { name: "Design", route: "/design" }
 ];
 const settings = ["Design", "Development"];
 
