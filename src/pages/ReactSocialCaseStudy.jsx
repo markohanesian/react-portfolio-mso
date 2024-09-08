@@ -104,7 +104,12 @@ const ReactSocialCaseStudy = () => {
         <Typography variant="h5" component="h3" gutterBottom>
           Design Toolkit
         </Typography>
-        <img alt="figma logo" src=""></img>
+        <img style={{height: "80px", width: "auto", margin: "1rem 2rem"}} alt="figma logo" src="/case-study-images/figma-logo.png"></img>
+        <img style={{height: "80px", width: "auto", margin: "1rem 2rem"}} alt="wave logo" src="/case-study-images/wave-logo.png"></img>
+        <img style={{height: "80px", width: "auto", margin: "1rem 2rem"}} alt="user interview symbol" src="/case-study-images/user-interview-logo.png"></img>
+        <Typography variant="body1" paragraph>
+          Designed with Figma, tested with Wave, interviews conducted for UX feedback. 
+        </Typography>
         <Typography variant="body1" paragraph>
           <strong>Ideation:</strong> Focused on creating an easy-to-use and
           visually appealing platform reminiscent of older DOS computers that
