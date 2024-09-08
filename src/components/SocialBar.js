@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconButton } from '@mui/material/';
-import { Facebook, Instagram, LinkedIn } from '@mui/icons-material';
+import { /*Facebook, */Instagram, /*LinkedIn*/ } from '@mui/icons-material';
 
 const TikTokIcon = ({ color = "#000000" }) => {
   return (
