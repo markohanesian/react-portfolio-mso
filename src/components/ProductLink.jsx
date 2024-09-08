@@ -4,7 +4,7 @@ import { styled } from '@mui/system';
 import { useTheme } from '@mui/material/styles';
 
 // Styled component for the ButtonLink
-const ProductLink = styled(Link)(({ theme }) => ({
+const ProductLinkStyled = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
   borderRadius: '12px',
   display: 'flex',
@@ -26,11 +26,11 @@ const ProductLink = styled(Link)(({ theme }) => ({
 }));
 
 
-export default function ProductLink({ href, className, ...props }) => {
+export default function ProductLink({ href, className, ...props }) {
   const theme = useTheme(); // Access the current theme
 
   return (
-    <ProductLink theme={theme} href={href} className={className} {...props} />
+    <ProductLinkStyled theme={theme} href={href} className={className} {...props} />
   );
 };
 
