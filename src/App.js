@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import ReactSocialCaseStudy from "./pages/ReactSocialCaseStudy";
 import Development from "./pages/Development";
 import Design from "./pages/Design";
+import LinkTree from "./pages/LinkTree"
 import NavBar from "./components/NavBar"; // Import the NavBar component
 import { makeStyles } from "@mui/styles";
 import DarkModeToggle from "react-dark-mode-toggle";
@@ -55,7 +56,7 @@ function App() {
             checked={darkMode}
             onChange={() => setDarkMode(!darkMode)}
           /></NavBar>
-          <div>
+          <div style={{ minHeight: '90vh', }}>
             <Routes>
               {" "}
               {/* Replaces Switch with Routes for v6 */}
@@ -65,6 +66,12 @@ function App() {
                   window.location.href = "http://markohanesian.photography/";
                   return null;
                 }}
+              />
+              <Route
+                path="/linktree"
+                element={
+                  <LinkTree />
+                }
               />
               <Route
                 path="/design"
