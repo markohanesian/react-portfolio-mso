@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Container, Grid } from "@mui/material";
 import PortfolioItem from "../components/PortfolioItem";
+import DribbbleLinkCard from "../components/DribbbleLinkCard";
 import { makeStyles } from "@mui/styles";
 import { useNavigate } from "react-router-dom";
 
@@ -33,11 +34,19 @@ const ReactSocialCaseStudy = () => {
           mb: 4,
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
+          alignItems: "flex-start",
         }}
       >
         <Typography variant="h3" component="h1" gutterBottom>
           Design
+        </Typography>
+        <Typography
+          sx={{ alignSelf: "right", marginTop: "1rem" }}
+          variant="h4"
+          component="h1"
+          gutterBottom
+        >
+          Case Studies
         </Typography>
         <Grid
           container
@@ -47,27 +56,48 @@ const ReactSocialCaseStudy = () => {
         >
           <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
             <PortfolioItem
-              cardImage="item-images/react-social-preview.png"
+              cardImage="case-study-images/home.png"
               cardTitle="ReactSocial"
               caseStudyURL={handleCaseStudyClick} // Pass the function here
             />
           </Grid>
+        </Grid>
+        <Typography
+          sx={{ alignSelf: "right", marginTop: "1rem" }}
+          variant="h4"
+          component="h1"
+          gutterBottom
+        >
+          Prototypes
+        </Typography>
+        <Grid
+          container
+          spacing={2}
+          className={classes.gridContainer}
+          sx={{ maxWidth: "800px", margin: "0 auto" }}
+        >
           <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-            <PortfolioItem
-              cardImage="item-images/former-mso.png"
-              cardTitle="Former"
-              cardDescription="Form creator website with export to pdf"
-              deployURL="https://former-mso.netlify.app/"
-              codeURL="https://github.com/markohanesian/former-mso"
+            <DribbbleLinkCard
+              cardImage="item-images/tulips-concept.png"
+              url="https://dribbble.com/shots/14062665-Tulips-homepage-concept?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Tulips%20-%20homepage%20concept&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Tulips%20-%20homepage%20concept&utm_medium=Social_Share"
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
-            <PortfolioItem
-              cardImage="item-images/git-good.png"
-              cardTitle="Git Good"
-              cardDescription="Git language cheatsheet with copy to clipboard. Built with ReactJS and features a custom logo design"
-              deployURL="https://git-cheatsheet-mso.netlify.app/"
-              codeURL="https://github.com/markohanesian/git-cheatsheet-mso"
+            <DribbbleLinkCard
+              cardImage="item-images/werkspace.png"
+              url="https://dribbble.com/shots/17461500-Werkspace-Coworking-Business-Landing-Page-Design-Concept?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Werkspace%20-%20Coworking%20Business%20Landing%20Page%20Design%20Concept&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Werkspace%20-%20Coworking%20Business%20Landing%20Page%20Design%20Concept&utm_medium=Social_Share"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
+            <DribbbleLinkCard
+              cardImage="item-images/styledPP.png"
+              url="https://dribbble.com/shots/13611728-Landing-page-styld-app-concept?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Landing%20page%20-%20styld%20-%20app%20concept&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Landing%20page%20-%20styld%20-%20app%20concept&utm_medium=Social_Share"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4} className={classes.gridItem}>
+            <DribbbleLinkCard
+              cardImage="item-images/signup-pgp.png"
+              url="https://dribbble.com/shots/13495221-Signup-Form-Concept-Project-Golden-Phoenix?utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Signup%20Form%20Concept%20-%20Project%20Golden%20Phoenix&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=markohanesian&utm_content=Signup%20Form%20Concept%20-%20Project%20Golden%20Phoenix&utm_medium=Social_Share"
             />
           </Grid>
         </Grid>
