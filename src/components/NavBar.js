@@ -19,7 +19,7 @@ const dropdownPages = [
 ];
 const settings = ["Design", "Development"];
 
-function ResponsiveAppBar(props) {
+function NavBar(props) {
   const theme = useTheme(); 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const navigate = useNavigate(); // Use navigate for navigation
@@ -59,7 +59,6 @@ function ResponsiveAppBar(props) {
               display: { xs: "flex", md: "none" },
             }}
           >
-            {props.children}
             <IconButton
               size="large"
               aria-label="menu"
@@ -133,10 +132,21 @@ function ResponsiveAppBar(props) {
                 </Button>
               ))}
           </Box>
+            {/* Children always visible on all screens */}
+            <Box
+            sx={{
+              justifyContent: "flex-end",
+              alignItems: "center",
+              flexGrow: 1,
+              display: "flex",
+            }}
+          >
+            {props.children}
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
 
-export default ResponsiveAppBar;
+export default NavBar;
