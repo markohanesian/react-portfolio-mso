@@ -13,11 +13,13 @@ const ProductLinkStyled = styled(Link)(({ theme }) => ({
   margin: "1rem 0",
   padding: '.75rem',
   fontSize: '18px',
-  backgroundColor: theme.palette.mode === 'dark' ? '#333' : '#fff',  
-  color: theme.palette.mode === 'dark' ? 'var(--white)' : 'white',
+  border: theme.palette.mode === 'dark' ? '1px solid white' : '1px solid black',  
+  color: theme.palette.mode === 'dark' ? 'white' : 'black',
   textAlign: 'center',
   '&:hover': {
-    backgroundColor: theme.palette.mode === 'dark' ? '#444' : theme.palette.grey[800], // Optional hover effect
+    backgroundColor: theme.palette.mode === 'dark' ? '#444' : theme.palette.grey[600], // Optional hover effect
+    color: theme.palette.mode === 'dark' ? 'white' : theme.palette.grey[100], // Optional hover effect
+
   },
 }));
 
