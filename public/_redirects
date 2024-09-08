@@ -1,3 +1,6 @@
 # Redirects from what the browser requests to what we serve
-/home              /	200!
-/design            /	200!
+
+/home / 200!
+/design / 200!
+/development / 200!
+/linktree / 200!
