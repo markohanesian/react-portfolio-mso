@@ -6,23 +6,19 @@ import { useTheme } from '@mui/material/styles';
 // Styled component for the ButtonLink
 const ProductLinkStyled = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
+  width: "50vw",
   borderRadius: '12px',
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  alignItems: 'center',
   gridColumnGap: '.5rem',
   gridRowGap: '.5rem',
   margin: "1rem 0",
-  padding: '1rem',
+  padding: '.75rem',
   fontSize: '18px',
-  backgroundColor: theme.palette.mode === 'dark' ? '#333' : 'black',  // Adjusts based on theme mode
+  backgroundColor: theme.palette.mode === 'dark' ? '#333' : '#fff',  
   color: theme.palette.mode === 'dark' ? 'var(--white)' : 'white',
   textAlign: 'center',
   '&:hover': {
     backgroundColor: theme.palette.mode === 'dark' ? '#444' : theme.palette.grey[800], // Optional hover effect
   },
-  width: 'fit-content'
 }));
 
 
