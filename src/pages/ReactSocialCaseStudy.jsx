@@ -37,9 +37,25 @@ const ReactSocialCaseStudy = () => {
           src="case-study-images/home.png"
         />
         <br></br>
-        <CTALink href="https://social-media-app-mso.web.app/" target="_blank">
-          Site
-        </CTALink>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            width: "100%", 
+            maxWidth: "500px",
+          }}
+        >
+          <CTALink to="https://social-media-app-mso.web.app/" target="_blank">
+            Live Site
+          </CTALink>
+          <CTALink
+            to="https://www.figma.com/design/MMJPKwlVpCUPcUxPhOPHqe/ReactSocial?node-id=0-1&t=Q5JpPQRvPngP450I-1"
+            target="_blank"
+          >
+            Figma
+          </CTALink>
+        </Box>
       </Box>
 
       <Divider sx={{ mb: 4 }} />
@@ -85,6 +101,10 @@ const ReactSocialCaseStudy = () => {
         <Typography variant="h4" component="h2" gutterBottom>
           Design Process
         </Typography>
+        <Typography variant="h5" component="h3" gutterBottom>
+          Design Toolkit
+        </Typography>
+        <img alt="figma logo" src=""></img>
         <Typography variant="body1" paragraph>
           <strong>Ideation:</strong> Focused on creating an easy-to-use and
           visually appealing platform reminiscent of older DOS computers that
