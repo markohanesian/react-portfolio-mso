@@ -1,5 +1,5 @@
 import React from "react";
-import { Theme, createStyles, makeStyles } from '@mui/styles';
+import { Theme, createStyles, makeStyles } from "@mui/styles";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: "1rem",
       padding: "1rem",
       maxWidth: "300px",
-      minHeight: "400px"
+      minHeight: "400px",
     },
     content: {
       display: "flex",
@@ -24,10 +24,11 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: "0.5rem",
       maxWidth: "200px",
     },
-  
+
     image: {
       height: "200px",
-      width: "200px"    },
+      width: "200px",
+    },
     title: {
       fontSize: "1rem",
       fontWeight: "400",
@@ -40,8 +41,11 @@ const useStyles = makeStyles((theme: Theme) =>
     buttons: {
       display: "flex",
       flexDirection: "row",
-      justifyContent: "flex-start",
-      alignItems: "flex-end",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+    cardLinks: {
+      backgroundColor: theme.palette.mode === "dark" ? "red" : "yellow",
     },
   })
 );
@@ -56,7 +60,7 @@ export default function PortfolioItem(props) {
           className={classes.image}
           image={props.cardImage}
           title={`thumbnail of${props.cardTitle}`}
-          />
+        />
       </div>
       <div className={classes.details}>
         <CardContent className={classes.content}>
@@ -73,17 +77,32 @@ export default function PortfolioItem(props) {
         </CardContent>
         <div className={classes.buttons}>
           {props.deployURL && (
-            <Button color="secondary" href={props.deployURL} target="blank">
+            <Button
+              color="warning"
+              variant="contained"
+              href={props.deployURL}
+              target="blank"
+            >
               Site
             </Button>
           )}
           {props.codeURL && (
-            <Button color="secondary" href={props.codeURL} target="blank">
+            <Button
+              color="warning"
+              variant="contained"
+              href={props.codeURL}
+              target="blank"
+            >
               Code
             </Button>
           )}
           {props.caseStudyURL && (
-            <Button color="secondary" href={props.caseStudyURL} target="blank">
+            <Button
+              color="warning"
+              variant="contained"
+              href={props.caseStudyURL}
+              target="blank"
+            >
               View case study
             </Button>
           )}
