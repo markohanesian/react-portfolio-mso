@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from '@mui/material/Link';
 import { styled } from '@mui/system';
 import { useTheme } from '@mui/material/styles';
 
@@ -28,7 +28,7 @@ export default function ProductLink({ href, className, ...props }) {
   const theme = useTheme(); // Access the current theme
 
   return (
-    <ProductLinkStyled theme={theme} href={href} className={className} {...props} />
+    <ProductLinkStyled target="_blank" rel="noopener" theme={theme} href={href} className={className} {...props} />
   );
 };
 
