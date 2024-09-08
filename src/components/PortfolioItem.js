@@ -54,7 +54,7 @@ export default function PortfolioItem(props) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.container}>
+    <Card className={classes.container} elevation={0}>
       <div className={classes.imageContainer}>
         <CardMedia
           className={classes.image}
