@@ -41,13 +41,12 @@ function ResponsiveAppBar(props) {
         <Toolbar disableGutters>
           {/* Home icon on the left */}
           <IconButton
-            size="large"
             aria-label="home"
             onClick={() => navigate('/')}
             color="inherit"
             sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }}
           >
-            <HomeIcon />
+            <HomeIcon sx={{height: "32px", width: "32px"}} />
           </IconButton>
 
 
@@ -83,7 +82,7 @@ function ResponsiveAppBar(props) {
             >
               {dropdownPages.map((page) => (
                 <MenuItem key={page.name} onClick={() => handleCloseNavMenu(page.route)}>
-                  <Typography sx={{ textAlign: 'center' }}>{page.name}</Typography>
+                  <Typography sx={{ textAlign: 'center', fontFamily: 'Marcellus, serif', textTransform: "none", fontSize: "1.5rem" }}>{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -95,7 +94,7 @@ function ResponsiveAppBar(props) {
               <Button
                 key={page.name}
                 onClick={() => handleCloseNavMenu(page.route)}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Marcellus, serif', textTransform: "none", fontSize: "1.5rem"  }}
               >
                 {page.name}
               </Button>

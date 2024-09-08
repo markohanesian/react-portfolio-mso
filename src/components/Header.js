@@ -15,6 +15,7 @@ const useStyles = makeStyles({
     fontSize: "2.5rem",
     fontWeight: "300",
     marginTop: "1rem",
+    fontFamily: 'Marcellus, serif'
   },
   subtitle: {
     display: "flex",
@@ -23,6 +24,7 @@ const useStyles = makeStyles({
     fontSize: "1rem",
     fontWeight: "400",
     maxWidth: "20rem",
+    fontFamily: 'Marcellus, serif'
   },
   container: {
     display: "flex",
@@ -62,6 +64,7 @@ export default function Header() {
         gutterBottom
         variant="h4"
         component="h1"
+        sx={{fontFamily: 'Marcellus, serif'}}
       >
         Hello, I'm Mark
       </Typography>
