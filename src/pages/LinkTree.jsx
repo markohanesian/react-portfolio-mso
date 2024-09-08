@@ -5,7 +5,7 @@ import Header from "../components/Header-V2";
 
 const ReactSocialCaseStudy = () => {
   return (
-    <Container maxWidth="md" sx={{ mt: 4, mb: 4, textAlign: "flex-start", backgroundImage: "linear-gradient(#ebeef9, #fff)" }}>
+    <Container maxWidth="md" sx={{ mt: 4, mb: 4, textAlign: "flex-start"}}>
       <Box
         sx={{
           textAlign: "center",
