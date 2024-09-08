@@ -100,7 +100,7 @@ export default function PortfolioItem(props) {
             <Button
               color="warning"
               variant="contained"
-              href={props.caseStudyURL}
+              onClick={props.caseStudyURL}
               target="blank"
             >
               View case study
