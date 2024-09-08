@@ -16,8 +16,8 @@ const ReactSocialCaseStudy = () => {
         }}
       >
         <Header />
-        <Typography variant="h4" component="h2" gutterBottom>
-          Apartment Woodworking Starter Kit
+        <Typography variant="h1" sx={{fontSize: "24px", fontWeight: "bold"}}>
+          Apartment Woodworking <br></br> Starter Kit
         </Typography>
         <ProductLink url="https://amzn.to/3zbXxx6">Saw</ProductLink>
         <ProductLink url="https://amzn.to/47hBBNE">Plane</ProductLink>
