@@ -73,7 +73,7 @@ export default function Header() {
         website with ReactJS and MaterialUI
       </Typography>
       <div className={classes.linkContainer}>
-        <Link
+        {/* <Link
           className={classes.link}
           href="https://docs.google.com/document/d/13YCjJR0GZG3vrNRGLlTZpAYYAn5Oj5OahaxFcmQakMQ/edit?usp=sharing"
           target="_blank"
@@ -81,7 +81,7 @@ export default function Header() {
           aria-label="View Mark's resume"
         >
           Resume
-        </Link>
+        </Link> */}
         <Link
           className={classes.link}
           href="https://www.linkedin.com/in/mark-ohanesian/"
